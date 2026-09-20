@@ -228,6 +228,28 @@ async function main(): Promise<void> {
 
   sources = await harvest([...seeds, ...discovered], sources, selfDomains);
   await writeJson("sources.json", sources);
+
+  /**
+   * No readable source is a finding, and the run should say so plainly rather
+   * than proceed through empty stages and fail somewhere less obvious.
+   *
+   * The usual cause is search returning nothing. DuckDuckGo serves results to a
+   * browser and refuses them to datacenter addresses, so a hosted instance can
+   * see zero results where a laptop sees plenty. Seeds are the answer: they are
+   * fetched directly and never depend on a search engine.
+   */
+  if (sources.filter((s) => !s.blocked).length === 0) {
+    process.stderr.write(
+      `\nNo readable public source was found for ${plan.name}.\n\n` +
+        `  Searches returned ${discovered.length} result(s) and ${seeds.length} seed URL(s) were supplied.\n` +
+        `  Web search is often blocked from hosted environments, which is what a\n` +
+        `  zero-result search usually means rather than an absence of coverage.\n\n` +
+        `  Supply starting URLs directly with --seed <url>, repeatable, or\n` +
+        `  --seeds-file <path>. See seeds/khaled-talhouni.txt for the format.\n\n` +
+        `  Nothing was written beyond the source ledger. No claim was invented.\n\n`,
+    );
+    return;
+  }
   log.info("sources", {
     total: sources.length,
     readable: sources.filter((s) => !s.blocked).length,
@@ -390,7 +412,9 @@ async function main(): Promise<void> {
   const deferred = ranked.slice(MAX_VERIFIED_CLAIMS);
   log.info("verification set", {
     sourcesRepresented: new Set(claims.map((c) => c.derived_from_source_id)).size,
-    topTier: tierOf(claims[0] as Claim),
+    // No cast. claims is empty whenever the harvest found nothing, and
+    // `claims[0] as Claim` asserted otherwise, which compiled and then crashed.
+    topTier: claims[0] ? tierOf(claims[0]) : 0,
   });
   if (deferred.length > 0) {
     log.warn("claims deferred beyond the verification cap", {

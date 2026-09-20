@@ -408,3 +408,45 @@ secret, but it is there and removing it would need a history rewrite.
 check passed, because every check inherited the assumption I was trying to test.
 "Works on a clean clone" cannot be established from the machine that built it. The
 same mistake shape as entry 1: a true observation, generalised past what it supports.
+
+---
+
+## 9. A type assertion that asserted something false
+
+**Date:** 2026-09-20
+**Stage:** first run on a second subject, on the deployed instance
+**Class:** a cast used to satisfy the compiler rather than to state a fact
+
+Running the tool on a different person produced no sources, because web search
+returns nothing from a datacenter address. Then it crashed:
+
+```
+INFO  sources total=0 readable=0 blocked=0
+INFO  extraction inputs readableSources=0 withUsableText=0 alreadyDone=0
+ERROR pipeline failed error=Cannot read properties of undefined
+      (reading 'derived_from_source_id')
+```
+
+The line was mine:
+
+```ts
+topTier: tierOf(claims[0] as Claim),
+```
+
+With `noUncheckedIndexedAccess` on, TypeScript correctly typed `claims[0]` as
+`Claim | undefined`. Rather than handle the undefined case, I wrote `as Claim` to
+make the error go away. The compiler believed me. It was not true.
+
+The whole project rests on not letting a model assert something it has not
+established. I did the same thing to the type checker, in a logging line, and it
+took down a run.
+
+**Fixed by** checking instead of asserting, and by treating an empty harvest as a
+result: the run now explains that search is commonly blocked from hosted
+environments, points at `--seed` and `--seeds-file`, and exits cleanly without
+inventing anything.
+
+**What I would take from this.** A cast is a claim about the world with no evidence
+behind it, which is the exact pattern the labeller refuses. I grepped for others
+afterwards and there were none, but I would not have found this one by reading; the
+compiler was satisfied and the tests passed. A second subject found it in seconds.
