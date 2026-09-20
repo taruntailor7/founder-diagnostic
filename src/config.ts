@@ -46,11 +46,16 @@ export const OFFLINE =
 export const FORCE = process.argv.includes("--force");
 
 export const paths = {
+  // Data. Moves with FD_ROOT, so a run can be pointed at a scratch ledger.
   ledger: path.join(ROOT, "ledger"),
   httpCache: path.join(ROOT, "fixtures", "http"),
   llmCache: path.join(ROOT, "fixtures", "llm"),
-  prompts: path.join(ROOT, "prompts"),
   out: path.join(ROOT, "out"),
+
+  // Code. Prompts are part of the program and always load from the package,
+  // never from FD_ROOT. Relocating them meant every extraction failed with
+  // ENOENT the moment a run used a scratch ledger.
+  prompts: path.join(PACKAGE_ROOT, "prompts"),
 } as const;
 
 export const llm = {
