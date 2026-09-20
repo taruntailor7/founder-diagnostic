@@ -141,6 +141,24 @@ const FREE_TIER_NOTICE = `
   </p>
 </div>`;
 
+/**
+ * The committed ledger is a worked example, not a fixture the tool is tied to.
+ *
+ * Shipping it means Review and Diagnostic hold real content the moment the site
+ * opens, rather than three empty tabs and a forty minute wait. Unlabelled, that
+ * reads as the tool being hardcoded to one person.
+ */
+const SAMPLE_NOTICE = (name: string): string => `
+<div class="notice" style="border-left-color:#0b4f6c">
+  <h3 style="color:#0b4f6c">You are looking at a worked example</h3>
+  <p style="margin:0">
+    This is a completed assessment of <strong>${esc(name)}</strong>, committed to
+    the repository so there is something real to read without running anything.
+    Analysing someone else archives it under <code>ledger/archive/</code> and
+    starts clean; it is a sample, not a fixture this tool is tied to.
+  </p>
+</div>`;
+
 function nav(active: "run" | "review" | "doc", counts: { queue: number }): string {
   const item = (href: string, key: string, label: string) =>
     `<a href="${href}" class="${active === key ? "on" : ""}">${label}</a>`;
@@ -551,7 +569,7 @@ ${
           `${approvedCount} approved &middot; ${claims.length} claims. ` +
           `Refusals are listed first so they get read. Nothing renders without an approval recorded here.`,
         nav("review", { queue: queue.filter((c) => c.status === "VERIFIED" || c.status === "PARTIALLY_VERIFIED").length }),
-        body,
+        (subject ? SAMPLE_NOTICE(subject.name) : "") + body,
       ),
     );
   });
