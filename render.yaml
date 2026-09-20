@@ -15,9 +15,10 @@ services:
     name: founder-diagnostic
     runtime: node
     plan: free
-    region: singapore
+    region: oregon
     branch: main
-    autoDeploy: true
+    # Replaces the deprecated autoDeploy field.
+    autoDeployTrigger: commit
 
     buildCommand: npm ci --omit=dev
     startCommand: npm run review
