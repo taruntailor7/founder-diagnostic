@@ -249,6 +249,24 @@ async function main(): Promise<void> {
    * fetched directly and never depend on a search engine.
    */
   if (sources.filter((s) => !s.blocked).length === 0) {
+    // Record who was being assessed before stopping. Returning without this
+    // left a ledger naming a subject in the log and holding no subject file,
+    // so the renderer reported "no subject.json" for a run that had clearly
+    // identified someone.
+    await writeJson<Subject>("subject.json", {
+      id: "subj_001",
+      name: plan.name,
+      linkedin_url: subject_url,
+      role,
+      company,
+      company_domain: selfDomains[0] ?? null,
+      self_domains: selfDomains,
+      location: arg("location") ?? null,
+      identity_corroborations: [],
+      assessed_at: new Date().toISOString(),
+      pipeline_version: PIPELINE_VERSION,
+    });
+
     process.stderr.write(
       `\nNo readable public source was found for ${plan.name}.\n\n` +
         `  Searches returned ${discovered.length} result(s) and ${seeds.length} seed URL(s) were supplied.\n` +
