@@ -399,7 +399,28 @@ async function main(): Promise<void> {
   // --- Labelling, deterministic ----------------------------------------------
   log.stage("label");
 
+  /**
+   * Only claims that actually went through verification get a label.
+   *
+   * A claim with no evidence rows at all was never checked: the run was
+   * interrupted, or a budget stopped the stage. Labelling it UNVERIFIED would
+   * report "no supporting source found" when nothing ever looked for one, which
+   * is a fabricated finding of exactly the kind this system exists to prevent.
+   * Those stay pending, visible in the ledger and absent from the document.
+   *
+   * A claim that was checked and produced only not_found rows is different. It
+   * has evidence, the evidence is negative, and rule 6 refusing it is correct.
+   */
+  const wasChecked = new Set(evidence.map((e) => e.claim_id));
+  const unchecked = claims.filter((c) => !wasChecked.has(c.id));
+  if (unchecked.length > 0) {
+    log.warn("claims left unchecked, staying pending rather than refused", {
+      unchecked: unchecked.length,
+    });
+  }
+
   for (const claim of claims) {
+    if (!wasChecked.has(claim.id)) continue;
     const forClaim = evidence.filter((e) => e.claim_id === claim.id);
     const result = label({
       claim,
