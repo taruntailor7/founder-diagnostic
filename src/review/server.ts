@@ -528,14 +528,26 @@ https://www.thenationalnews.com/business/an-article-about-them/"></textarea>
     }
 
     if (!existsSync(file)) {
+      if (counts.queue > 0) {
+        res.type("html").send(
+          page(
+            "Diagnostic",
+            "Review not complete.",
+            nav("doc", counts),
+            `<div class="card">
+               <p><strong>${counts.queue}</strong> publishable claim${counts.queue > 1 ? "s" : ""} still need a decision in <a href="/?open=1">Review</a> before the diagnostic can be rendered.</p>
+             </div>`,
+          ),
+        );
+        return;
+      }
       res.type("html").send(
         page(
           "Diagnostic",
-          "Not rendered yet.",
+          "Ready to render.",
           nav("doc", counts),
           `<div class="card">
-             <p>The renderer refuses to write a document containing a claim nobody approved.
-                ${counts.queue > 0 ? `<strong>${counts.queue}</strong> still need a decision.` : "Everything publishable is approved."}</p>
+             <p>Every publishable claim has a decision.</p>
              <form method="post" action="/render"><button class="primary">Render the diagnostic</button></form>
            </div>`,
         ),
@@ -669,7 +681,8 @@ ${
       decision,
       reviewer: entry.reviewer,
     });
-    res.redirect("/?open=1");
+    const remaining = await queueSize();
+    res.redirect(remaining === 0 ? "/diagnostic" : "/?open=1");
   });
 
   // No PUT, PATCH or DELETE anywhere. The log is append only.
