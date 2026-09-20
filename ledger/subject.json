@@ -1,0 +1,118 @@
+{
+  "id": "subj_001",
+  "name": "Khaled Talhouni",
+  "linkedin_url": "https://www.linkedin.com/in/khaledtalhouni/",
+  "role": "Founder and Managing Partner",
+  "company": "Nuwa Capital",
+  "company_domain": "nuwacapital.io",
+  "self_domains": [
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io",
+    "nuwacapital.io"
+  ],
+  "location": "Dubai, United Arab Emirates",
+  "identity_corroborations": [
+    {
+      "source_id": "src_0001",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0004",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0007",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0007",
+      "attribute": "role",
+      "value": "Founder and Managing Partner"
+    },
+    {
+      "source_id": "src_0008",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0010",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0011",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0012",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0013",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0017",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0019",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0020",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0022",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    },
+    {
+      "source_id": "src_0022",
+      "attribute": "role",
+      "value": "Founder and Managing Partner"
+    },
+    {
+      "source_id": "src_0023",
+      "attribute": "company",
+      "value": "Nuwa Capital"
+    }
+  ],
+  "assessed_at": "2026-09-20T14:50:09.377Z",
+  "pipeline_version": "1.0.0"
+}

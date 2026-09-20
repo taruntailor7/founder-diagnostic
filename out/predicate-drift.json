@@ -1,0 +1,80 @@
+{
+  "claim": {
+    "id": "clm_drift_001",
+    "subject_id": "subj_demo",
+    "text": "71% of B2B buyers research a founder's personal profile before engaging the company",
+    "kind": "statistic",
+    "predicate": {
+      "action": "research",
+      "object": "a founder's personal profile before engaging the company",
+      "value": {
+        "raw": "71%",
+        "amount": 71,
+        "unit": "percent"
+      },
+      "measures": "share who research a founder's personal profile before engaging",
+      "population": "B2B buyers",
+      "time": {
+        "raw": "2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      }
+    },
+    "derived_from_source_id": "src_drift_001",
+    "status": "UNVERIFIED",
+    "refusal_code": "PREDICATE_DRIFT",
+    "refusal_note": "source src_drift_001 supports the figure but not its measures and population",
+    "evidence_ids": [],
+    "footnote_id": null,
+    "created_at": "2026-09-20T13:43:42.509Z",
+    "updated_at": "2026-09-20T13:43:42.509Z"
+  },
+  "source": {
+    "id": "src_drift_001",
+    "url": "https://www.marketing-interactive.com/report-over-40-of-b2b-deals-stall-due-to-hidden-buyers",
+    "url_canonical": "marketing-interactive.com/report-over-40-of-b2b-deals-stall-due-to-hidden-buyers",
+    "domain": "marketing-interactive.com",
+    "publisher": "Marketing-Interactive",
+    "title": "Report: Over 40% of B2B deals stall due to hidden buyers",
+    "tier": 1,
+    "tier_label": "aggregator",
+    "published_at": "2026-09-18",
+    "accessed_at": "2026-09-20T13:43:42.540Z",
+    "content_sha256": "c1fa8207af7b811f92602567e3726a4c949d75caa1e534c76208394818236019",
+    "cache_path": "fixtures/http/5b9a92bf3feefe76b444ed1b7cb7be11e97eac3e69933fabdedf22dc2288a2c0.json",
+    "fetch_method": "http",
+    "degraded": false,
+    "origin_group": "og_001",
+    "blocked": false,
+    "notes": null
+  },
+  "evidence": {
+    "claim_id": "clm_drift_001",
+    "source_id": "src_drift_001",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "In addition, 71% of hidden buyers said thought leadership is more effective than conventional sales materials in demonstrating a vendor’s potential value, while 64% said they trust thought leadership more than marketing content or product sheets when assessing capabilities.",
+    "reasoning": "The document reports the figure 71% but it refers to hidden buyers and their view on thought leadership, not to B2B buyers researching a founder’s personal profile.",
+    "predicate_match": {
+      "value": true,
+      "measures": false,
+      "population": false,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_drift_001",
+    "created_at": "2026-09-20T13:43:42.541Z"
+  },
+  "label": {
+    "status": "UNVERIFIED",
+    "refusal_code": "PREDICATE_DRIFT",
+    "note": "source src_drift_001 supports the figure but not its measures and population",
+    "rule": 2,
+    "independent_source_ids": [
+      "src_drift_001"
+    ],
+    "domains": [
+      "marketing-interactive.com"
+    ]
+  }
+}

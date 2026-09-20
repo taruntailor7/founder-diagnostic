@@ -1,0 +1,11 @@
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Deliberately NOT ignored, and this matters:
+#   ledger/     every claim, source, tier and refusal, readable on GitHub
+#               without cloning or running anything
+#   fixtures/   the recorded HTTP and model responses that make
+#               `npm run demo` work offline with no API key
+#   out/        the rendered diagnostic

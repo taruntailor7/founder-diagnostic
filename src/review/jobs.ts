@@ -1,0 +1,151 @@
+/**
+ * Running the pipeline from the browser.
+ *
+ * One job at a time, deliberately. Two concurrent runs would write the same
+ * ledger files and interleave their claim ids, and the append-only audit log
+ * would end up describing a state that never existed. A single slot is the
+ * honest constraint for a local operator tool, and it is enforced here rather
+ * than left to whoever clicks fastest.
+ *
+ * The child runs the same `bin/run.ts` the command line uses. There is no
+ * second code path, so the button cannot drift from the documented behaviour.
+ */
+
+import { spawn } from "node:child_process";
+import type { ChildProcess } from "node:child_process";
+import path from "node:path";
+import { ROOT } from "../config.ts";
+
+export type JobState = "running" | "finished" | "failed";
+
+export interface JobRequest {
+  linkedin: string;
+  name: string;
+  company: string;
+  role: string;
+  selfDomain: string;
+  location: string;
+}
+
+export interface Job {
+  id: string;
+  state: JobState;
+  request: JobRequest;
+  startedAt: string;
+  finishedAt: string | null;
+  exitCode: number | null;
+  /** Newest last. Capped, because a long run produces thousands of lines. */
+  lines: string[];
+}
+
+const MAX_LINES = 400;
+
+let current: Job | null = null;
+let child: ChildProcess | null = null;
+
+export const currentJob = (): Job | null => current;
+export const isRunning = (): boolean => current?.state === "running";
+
+export function validate(req: Partial<JobRequest>): string[] {
+  const problems: string[] = [];
+
+  const url = (req.linkedin ?? "").trim();
+  if (!/^https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/in\/[^/?#]+/i.test(url)) {
+    problems.push(
+      "LinkedIn URL should look like https://www.linkedin.com/in/their-handle",
+    );
+  }
+
+  if ((req.name ?? "").trim().split(/\s+/).length < 2) {
+    problems.push("Full name is required, first and last");
+  }
+
+  return problems;
+}
+
+/**
+ * The subject's own domains decide what counts as self-reported rather than
+ * independent, so a typo here silently promotes the company's own site to a
+ * corroborating source. Normalised rather than trusted as typed.
+ */
+function normaliseDomain(raw: string): string {
+  return raw
+    .trim()
+    .toLowerCase()
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .split("/")[0] ?? "";
+}
+
+export function start(req: JobRequest): Job {
+  if (isRunning()) throw new Error("a run is already in progress");
+
+  const args = [
+    "--experimental-strip-types",
+    "--disable-warning=ExperimentalWarning",
+    path.join(ROOT, "bin", "run.ts"),
+    "--linkedin", req.linkedin.trim(),
+    "--name", req.name.trim(),
+  ];
+
+  if (req.company.trim()) args.push("--company", req.company.trim());
+  if (req.role.trim()) args.push("--role", req.role.trim());
+  if (req.location.trim()) args.push("--location", req.location.trim());
+
+  const domain = normaliseDomain(req.selfDomain);
+  if (domain) args.push("--self-domain", domain);
+
+  const job: Job = {
+    id: `job_${Date.now()}`,
+    state: "running",
+    request: { ...req, selfDomain: domain },
+    startedAt: new Date().toISOString(),
+    finishedAt: null,
+    exitCode: null,
+    lines: [],
+  };
+
+  const proc = spawn(process.execPath, args, {
+    cwd: ROOT,
+    env: process.env,
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  const absorb = (chunk: Buffer) => {
+    for (const line of chunk.toString("utf8").split("\n")) {
+      const text = line.trimEnd();
+      if (text === "") continue;
+      job.lines.push(text);
+      if (job.lines.length > MAX_LINES) job.lines.shift();
+    }
+  };
+
+  // The pipeline logs progress to stderr and keeps stdout clean, so both are
+  // captured and stderr is the interesting one.
+  proc.stdout?.on("data", absorb);
+  proc.stderr?.on("data", absorb);
+
+  proc.on("close", (code) => {
+    job.state = code === 0 ? "finished" : "failed";
+    job.exitCode = code;
+    job.finishedAt = new Date().toISOString();
+    child = null;
+  });
+
+  proc.on("error", (err) => {
+    job.state = "failed";
+    job.lines.push(`failed to start: ${err.message}`);
+    job.finishedAt = new Date().toISOString();
+    child = null;
+  });
+
+  current = job;
+  child = proc;
+  return job;
+}
+
+export function cancel(): boolean {
+  if (!child || !isRunning()) return false;
+  child.kill("SIGTERM");
+  return true;
+}

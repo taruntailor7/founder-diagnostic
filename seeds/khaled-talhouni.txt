@@ -1,0 +1,51 @@
+# Seed URLs for the committed run.
+#
+# Seeds are a starting point, not a shortcut. Every one is fetched, tiered and
+# verified exactly like a URL that search turned up, and seeding a source does
+# not privilege it. They exist because search alone finds aggregator profiles
+# far more reliably than it finds register entries, and a diagnostic with no
+# primary sources in it would be measuring the wrong thing.
+#
+# Lines starting with # are ignored.
+
+# --- Primary: the regulator's own record -------------------------------------
+# Names the individual, his controlled functions, and the effective date.
+https://www.dfsa.ae/public-register/individuals/mr-khaled-talhouni
+https://www.dfsa.ae/public-register/firms/nuwa-capital-limited
+
+# --- Self-reported: the firm's own material ----------------------------------
+https://www.nuwacapital.io/
+https://www.nuwacapital.io/insights
+
+# --- Dated artifacts, for the cadence measurement ----------------------------
+# The author index carries no page-level date, so the posts are seeded directly.
+# These two are the whole cadence story: two pieces, three years apart, then
+# silence, under a bio still naming a firm he left in 2020.
+https://www.wamda.com/en/author/khaledtalhouni
+https://www.wamda.com/en/2019/03/anatomy-exit
+https://www.wamda.com/en/2016/02/sharing-our-way-out-of-malaise-mena-and-the-sharing-economy
+
+# --- Secondary: independent coverage across domains and years ----------------
+# The National and Bloomberg covered the same announcement on the same day in
+# February 2021 and characterised it differently: one reports 75 million raised,
+# the other leads on aiming to close 100 million. Same event, same day, two
+# numbers. Seeding both is what lets the verifier find the disagreement rather
+# than inherit whichever one it happened to read first.
+https://www.thenationalnews.com/business/technology/nuwa-capital-aims-to-close-100m-fund-by-end-of-year-as-it-taps-into-mena-s-tech-boom-1.1166634
+https://www.bloomberg.com/news/articles/2021-02-16/gulf-fund-raises-75-million-for-mideast-north-african-startups
+https://techcrunch.com/2021/05/28/middle-east-and-africa-will-reap-benefits-from-nuwa-capitals-newest-fund/
+https://www.dealstreetasia.com/stories/nuwa-capital-interview-362355
+https://www.zawya.com/en/wealth/wealth-management/interview-dubais-nuwa-capital-plans-to-deploy-very-aggressively-in-2024-r6r8yf81
+https://www.forbesmiddleeast.com/lists/the-middle-easts-top-venture-capitalists-2024/khaled-talhouni/
+
+# --- First-hand: his own words, with dates -----------------------------------
+https://postmoney.net/interview-khaled-talhouni-nuwa-capital/
+https://www.buzzsprout.com/2196686/episodes/16251956-from-founders-to-unicorns-sandpit-startups-ep29-khaled-talhouni
+
+# --- Known to be unreachable, seeded on purpose ------------------------------
+# ADGM sits behind Cloudflare and DIFC behind a Vercel checkpoint. Both are
+# primary sources and both will fail. They are seeded so the ledger records the
+# failure with a fetch event rather than silently omitting them, and so the
+# degradation path is exercised on every run instead of only in tests.
+https://www.adgm.com/public-registers/fsra/firms/financial-firms
+https://www.difc.ae/public-register

@@ -1,0 +1,7 @@
+{
+  "model": "deepseek/deepseek-v4-flash-0731:free",
+  "system": "You return exactly one JSON object and nothing else.",
+  "user": "Return {\"stance\":\"supports\"} exactly.",
+  "content": "{\"stance\":\"supports\"}",
+  "recorded_at": "2026-09-19T20:38:56.216Z"
+}

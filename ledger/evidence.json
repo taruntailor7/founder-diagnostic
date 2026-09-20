@@ -1,0 +1,1736 @@
+[
+  {
+    "claim_id": "clm_0001",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The document lists Mr Khaled Talhouni’s functions as “Licensed Director,Senior Executive Officer”, confirming he is a Licensed Director of Nuwa Capital Limited.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0001",
+    "created_at": "2026-09-20T14:07:54.702Z"
+  },
+  {
+    "claim_id": "clm_0001",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Mr Khaled Talhouni\nI011374\nAuthorised Individuals\n19-Nov-2020",
+    "reasoning": "The document lists Mr Khaled Talhouni as an Authorised Individual, which is a different designation than Licensed Director, so the claim is partially supported but the measure differs.",
+    "predicate_match": {
+      "value": true,
+      "measures": false,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0002",
+    "created_at": "2026-09-20T14:07:54.702Z"
+  },
+  {
+    "claim_id": "clm_0001",
+    "source_id": "src_0004",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as Managing Partner but does not state that he is a Licensed Director.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0003",
+    "created_at": "2026-09-20T14:07:54.702Z"
+  },
+  {
+    "claim_id": "clm_0001",
+    "source_id": "src_0004",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Khaled TalhouniManaging Partner",
+    "reasoning": "The document identifies Khaled Talhouni's role as 'Managing Partner' rather than 'Licensed Director,' which is a different title and does not confirm the specific claim that he is a Licensed Director.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0004",
+    "created_at": "2026-09-20T14:07:54.702Z"
+  },
+  {
+    "claim_id": "clm_0001",
+    "source_id": "src_0014",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Nuwa Capital Limited exists and is DFSA-regulated but makes no mention of Khaled Talhouni or any licensed directors, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0005",
+    "created_at": "2026-09-20T14:07:54.702Z"
+  },
+  {
+    "claim_id": "clm_0005",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Mr Khaled Talhouni\n\nI011374\n\nAuthorised Individuals\n\n19-Nov-2020",
+    "reasoning": "The document lists Mr Khaled Talhouni as an authorised individual with an effective date of 19‑Nov‑2020, matching the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0006",
+    "created_at": "2026-09-20T14:09:09.648Z"
+  },
+  {
+    "claim_id": "clm_0005",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Effective Date\n19-Nov-2020",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual of Nuwa Capital Limited with an effective date of 19‑Nov‑2020, matching the claim’s date.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0007",
+    "created_at": "2026-09-20T14:09:09.648Z"
+  },
+  {
+    "claim_id": "clm_0005",
+    "source_id": "src_0004",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any mention of Khaled Talhouni being an authorized individual effective 19‑Nov‑2020.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0008",
+    "created_at": "2026-09-20T14:09:09.648Z"
+  },
+  {
+    "claim_id": "clm_0005",
+    "source_id": "src_0004",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is a Managing Partner at Nuwa Capital Limited, which is consistent with being an authorized individual, but the document is undated and provides no information about a specific effective date of 19-Nov-2020 for his authorization.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0009",
+    "created_at": "2026-09-20T14:09:09.648Z"
+  },
+  {
+    "claim_id": "clm_0005",
+    "source_id": "src_0014",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document is a website footer/navigation page for Nuwa Capital Limited that contains no mention of Khaled Talhouni, any authorized individuals, or the date 19-Nov-2020, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0010",
+    "created_at": "2026-09-20T14:09:09.648Z"
+  },
+  {
+    "claim_id": "clm_0007",
+    "source_id": "src_0004",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Khaled TalhouniManaging Partner",
+    "reasoning": "The document lists Khaled Talhouni with the title Managing Partner, directly supporting the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0011",
+    "created_at": "2026-09-20T14:10:24.723Z"
+  },
+  {
+    "claim_id": "clm_0007",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document lists Mr Khaled Talhouni’s roles as Licensed Director and Senior Executive Officer, but does not state that he is Managing Partner of Nuwa Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0012",
+    "created_at": "2026-09-20T14:10:24.723Z"
+  },
+  {
+    "claim_id": "clm_0007",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual but does not state that he is the Managing Partner of Nuwa Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0013",
+    "created_at": "2026-09-20T14:10:24.723Z"
+  },
+  {
+    "claim_id": "clm_0007",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The DFSA register lists Khaled Talhouni's functions at Nuwa Capital Limited as 'Licensed Director, Senior Executive Officer,' not 'Managing Partner' as the claim states.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0014",
+    "created_at": "2026-09-20T14:10:24.723Z"
+  },
+  {
+    "claim_id": "clm_0007",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an Authorised Individual at Nuwa Capital Limited but does not specify his title as 'Managing Partner'—the Title and Category columns are empty for all listed individuals.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0015",
+    "created_at": "2026-09-20T14:10:24.723Z"
+  },
+  {
+    "claim_id": "clm_0012",
+    "source_id": "src_0014",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Restrictions: Managing a Collective Investment Fund and Advising on Financial Products are restricted to the fund management and provision of advice in respect of Qualified Investor Funds which take the form of Venture Capital Funds.",
+    "reasoning": "The source explicitly states that managing a collective investment fund and advising on financial products are restricted to qualified investor funds that are venture capital funds, matching the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0016",
+    "created_at": "2026-09-20T14:11:40.201Z"
+  },
+  {
+    "claim_id": "clm_0012",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement about Nuwa Capital Limited restricting managing a collective investment fund and advising on financial products to qualified investor funds that take the form of venture capital funds.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0017",
+    "created_at": "2026-09-20T14:11:40.201Z"
+  },
+  {
+    "claim_id": "clm_0012",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Managing a Collective Investment Fund is restricted to fund management in respect of Qualified Investor Funds which take the form of Venture Capital Funds.",
+    "reasoning": "The document explicitly states that managing a collective investment fund is restricted to qualified investor funds that are venture capital funds, matching the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0018",
+    "created_at": "2026-09-20T14:11:40.201Z"
+  },
+  {
+    "claim_id": "clm_0012",
+    "source_id": "src_0003",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document is about Wamda Capital and its managing partner Khaled Talhouni; it contains no mention of Nuwa Capital Limited or any restrictions on managing collective investment funds or advising on financial products.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0019",
+    "created_at": "2026-09-20T14:11:40.201Z"
+  },
+  {
+    "claim_id": "clm_0015",
+    "source_id": "src_0026",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Nuwa Capital Limited is regulated by the DFSA for the provision of Managing a Collective Investment Fund and Advising on Financial Products (Units).",
+    "reasoning": "The document explicitly states that Nuwa Capital Limited is regulated by the DFSA for the specified activities.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0020",
+    "created_at": "2026-09-20T14:12:54.720Z"
+  },
+  {
+    "claim_id": "clm_0015",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Nuwa Capital Limited is regulated by the DFSA for the provision of Managing a Collective Investment Fund and Advising on Financial Products.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0021",
+    "created_at": "2026-09-20T14:12:54.720Z"
+  },
+  {
+    "claim_id": "clm_0015",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "DFSA Reference Number:\nF006325",
+    "reasoning": "The document lists a DFSA reference number for Nuwa Capital Limited, indicating it is regulated by the DFSA.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0022",
+    "created_at": "2026-09-20T14:12:54.720Z"
+  },
+  {
+    "claim_id": "clm_0015",
+    "source_id": "src_0003",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document is about Wamda Capital and its activities in the MENA startup ecosystem; it contains no mention of Nuwa Capital Limited, the DFSA, or any regulatory licensing for managing collective investment funds or advising on financial products.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0023",
+    "created_at": "2026-09-20T14:12:54.720Z"
+  },
+  {
+    "claim_id": "clm_0015",
+    "source_id": "src_0008",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document mentions Nuwa Capital's headquarters in the U.A.E. but says nothing about DFSA regulation or the specific regulated activities of Managing a Collective Investment Fund and Advising on Financial Products (Units).",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0024",
+    "created_at": "2026-09-20T14:12:54.720Z"
+  },
+  {
+    "claim_id": "clm_0019",
+    "source_id": "src_0003",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document states Khaled Talhouni is managing partner at Wamda Capital, not at Nuwa Capital Ltd.; therefore it does not support the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0025",
+    "created_at": "2026-09-20T14:14:09.926Z"
+  },
+  {
+    "claim_id": "clm_0019",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Mr Khaled Talhouni’s functions as Licensed Director and Senior Executive Officer for Nuwa Capital Limited, but does not state that he is a Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0026",
+    "created_at": "2026-09-20T14:14:09.926Z"
+  },
+  {
+    "claim_id": "clm_0019",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual but does not state that he is a Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0027",
+    "created_at": "2026-09-20T14:14:09.926Z"
+  },
+  {
+    "claim_id": "clm_0019",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The DFSA register lists Khaled Talhouni's functions at Nuwa Capital Limited as 'Licensed Director, Senior Executive Officer,' not 'Managing Partner,' contradicting the claimed title.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0028",
+    "created_at": "2026-09-20T14:14:09.926Z"
+  },
+  {
+    "claim_id": "clm_0019",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an Authorised Individual at Nuwa Capital Limited but the Title column is empty, so it neither confirms nor denies the specific role of Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0029",
+    "created_at": "2026-09-20T14:14:09.926Z"
+  },
+  {
+    "claim_id": "clm_0021",
+    "source_id": "src_0008",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Designation: Managing Partner",
+    "reasoning": "The document explicitly lists Khaled Talhouni’s designation as Managing Partner of Nuwa Capital.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0030",
+    "created_at": "2026-09-20T14:15:24.789Z"
+  },
+  {
+    "claim_id": "clm_0021",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni’s functions as Licensed Director and Senior Executive Officer for Nuwa Capital Limited, but does not state that he is the Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0031",
+    "created_at": "2026-09-20T14:15:24.789Z"
+  },
+  {
+    "claim_id": "clm_0021",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual for Nuwa Capital but does not state that he is the Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0032",
+    "created_at": "2026-09-20T14:15:24.789Z"
+  },
+  {
+    "claim_id": "clm_0021",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Licensed Director,Senior Executive Officer",
+    "reasoning": "The DFSA register lists Khaled Talhouni's functions at Nuwa Capital Limited as 'Licensed Director, Senior Executive Officer,' not 'Managing Partner' as the claim states.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0033",
+    "created_at": "2026-09-20T14:15:24.789Z"
+  },
+  {
+    "claim_id": "clm_0021",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an Authorised Individual at Nuwa Capital Limited, but the Title column in the register is empty, so it neither confirms nor contradicts that his specific role is 'Managing Partner.'",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0034",
+    "created_at": "2026-09-20T14:15:24.789Z"
+  },
+  {
+    "claim_id": "clm_0026",
+    "source_id": "src_0019",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document mentions a $100 million fund but does not specify that the first close occurred in February 2021, so it does not support the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0035",
+    "created_at": "2026-09-20T14:17:24.972Z"
+  },
+  {
+    "claim_id": "clm_0026",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of a $100 million NVFI fund or a February 2021 announcement.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0036",
+    "created_at": "2026-09-20T14:17:24.972Z"
+  },
+  {
+    "claim_id": "clm_0026",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of a $100 million NVFI fund or a February 2021 announcement.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0037",
+    "created_at": "2026-09-20T14:17:24.972Z"
+  },
+  {
+    "claim_id": "clm_0026",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA public register entry confirming Nuwa Capital Limited as an authorised firm and listing Khaled Talhouni as a Licensed Director, but it contains no information about any fund close, fund size, or announcement date, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0038",
+    "created_at": "2026-09-20T14:17:24.972Z"
+  },
+  {
+    "claim_id": "clm_0026",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA regulatory register entry that confirms Nuwa Capital Limited is licensed to manage collective investment funds but contains no information about any specific fund size, fund name (NVFI), first close, or announcement date in February 2021.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0039",
+    "created_at": "2026-09-20T14:17:24.972Z"
+  },
+  {
+    "claim_id": "clm_0030",
+    "source_id": "src_0020",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Dubai-based Nuwa Capital closes $100m debut fund, eyes footprint in SE Asia",
+    "reasoning": "The sentence states that Nuwa Capital closed a $100m debut fund, matching the claim’s action, object, value, population, and time.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0040",
+    "created_at": "2026-09-20T14:18:40.242Z"
+  },
+  {
+    "claim_id": "clm_0030",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of a $100m fund or any figure matching the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0041",
+    "created_at": "2026-09-20T14:18:40.242Z"
+  },
+  {
+    "claim_id": "clm_0030",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of a $100m fund or any figure matching the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0042",
+    "created_at": "2026-09-20T14:18:40.242Z"
+  },
+  {
+    "claim_id": "clm_0030",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document is a DFSA public register entry confirming Nuwa Capital Limited as an authorised firm and listing Mr Khaled Talhouni as a Licensed Director since 19-Nov-2020, but it contains no information about any fund closure, fund size, or debut fund, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0043",
+    "created_at": "2026-09-20T14:18:40.242Z"
+  },
+  {
+    "claim_id": "clm_0030",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA regulatory register entry that confirms Nuwa Capital Limited is licensed to manage Venture Capital Funds, but it contains no information about any specific fund size, a fund closing event, or whether a debut fund was raised in 2023.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0044",
+    "created_at": "2026-09-20T14:18:40.242Z"
+  },
+  {
+    "claim_id": "clm_0031",
+    "source_id": "src_0007",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Khaled Talhouni has over a decade of experience as one of MENA's earliest tech VCs",
+    "reasoning": "The document explicitly states that Khaled Talhouni has over a decade of experience, matching the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0045",
+    "created_at": "2026-09-20T14:20:25.496Z"
+  },
+  {
+    "claim_id": "clm_0031",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement about Khaled Talhouni’s experience length or his status as one of MENA’s earliest tech VCs.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0046",
+    "created_at": "2026-09-20T14:20:25.496Z"
+  },
+  {
+    "claim_id": "clm_0031",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Khaled Talhouni has over a decade of experience as a tech VC.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0047",
+    "created_at": "2026-09-20T14:20:25.496Z"
+  },
+  {
+    "claim_id": "clm_0031",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an authorised individual at Nuwa Capital Limited (a venture capital fund) with an effective date of 19-Nov-2020, but it provides no information about his total years of experience or whether he is one of MENA's earliest tech VCs.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0048",
+    "created_at": "2026-09-20T14:20:25.496Z"
+  },
+  {
+    "claim_id": "clm_0035",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no reference to Khaled Talhouni’s role at Wamda Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0049",
+    "created_at": "2026-09-20T14:21:39.712Z"
+  },
+  {
+    "claim_id": "clm_0035",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorized individual at Nuwa Capital Limited, not as Managing Partner at Wamda Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0050",
+    "created_at": "2026-09-20T14:21:39.712Z"
+  },
+  {
+    "claim_id": "clm_0035",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Firm Name\n\nNuwa Capital Limited",
+    "reasoning": "The DFSA register lists Khaled Talhouni's firm as Nuwa Capital Limited, not Wamda Capital, and his functions as Licensed Director and Senior Executive Officer, not Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": false,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0051",
+    "created_at": "2026-09-20T14:21:39.712Z"
+  },
+  {
+    "claim_id": "clm_0035",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Name\nNuwa Capital Limited",
+    "reasoning": "The document is the DFSA public register entry for Nuwa Capital Limited, not Wamda Capital, so the population in the claim does not match the firm listed in the source.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": false,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0052",
+    "created_at": "2026-09-20T14:21:39.712Z"
+  },
+  {
+    "claim_id": "clm_0038",
+    "source_id": "src_0011",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Khaled Talhouni is Founder & Managing Partner at Nuwa Capital.",
+    "reasoning": "The document explicitly states the claim verbatim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0053",
+    "created_at": "2026-09-20T14:23:10.052Z"
+  },
+  {
+    "claim_id": "clm_0038",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Mr Khaled Talhouni as a Licensed Director and Senior Executive Officer of Nuwa Capital Limited, but does not state that he is Founder & Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0054",
+    "created_at": "2026-09-20T14:23:10.052Z"
+  },
+  {
+    "claim_id": "clm_0038",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorized individual for Nuwa Capital but does not provide any information about him being Founder & Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0055",
+    "created_at": "2026-09-20T14:23:10.052Z"
+  },
+  {
+    "claim_id": "clm_0038",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The DFSA register lists Khaled Talhouni's functions at Nuwa Capital Limited as 'Licensed Director, Senior Executive Officer,' not 'Founder & Managing Partner' as the claim states.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0056",
+    "created_at": "2026-09-20T14:23:10.052Z"
+  },
+  {
+    "claim_id": "clm_0038",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an Authorised Individual at Nuwa Capital Limited but does not state his specific title or role (e.g., Founder & Managing Partner), so it neither supports nor contradicts the claim about his exact position.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0057",
+    "created_at": "2026-09-20T14:23:10.052Z"
+  },
+  {
+    "claim_id": "clm_0040",
+    "source_id": "src_0012",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Mr. Khaled Talhouni is a Managing Partner & Board of Director at Nuwa Capital Ltd.",
+    "reasoning": "The sentence explicitly states that Khaled Talhouni holds the position of Board of Director at Nuwa Capital Ltd.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0058",
+    "created_at": "2026-09-20T14:25:09.762Z"
+  },
+  {
+    "claim_id": "clm_0040",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni’s functions as Licensed Director and Senior Executive Officer, but does not state that he is a Board of Director at Nuwa Capital Ltd.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0059",
+    "created_at": "2026-09-20T14:25:09.762Z"
+  },
+  {
+    "claim_id": "clm_0040",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual for Nuwa Capital Limited but does not state that he is a Board of Director.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0060",
+    "created_at": "2026-09-20T14:25:09.762Z"
+  },
+  {
+    "claim_id": "clm_0040",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "supports",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The document confirms Mr Khaled Talhouni holds the function of Licensed Director at Nuwa Capital Limited, which is a board-level director role consistent with the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0061",
+    "created_at": "2026-09-20T14:25:09.762Z"
+  },
+  {
+    "claim_id": "clm_0040",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Mr Khaled Talhouni",
+    "reasoning": "The document lists Khaled Talhouni under the category 'Authorised Individuals', not as a 'Board of Director', so the role claimed is not supported by the source.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0062",
+    "created_at": "2026-09-20T14:25:09.762Z"
+  },
+  {
+    "claim_id": "clm_0044",
+    "source_id": "src_0013",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Khaled Talhouni is the Managing Partner and co-founder of Nuwa Capital, a VC firm investing in early-stage startups across the MENAPT region, based in Dubai and Riyadh.",
+    "reasoning": "The quoted sentence explicitly states that Khaled Talhouni is the co‑founder of Nuwa Capital.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0063",
+    "created_at": "2026-09-20T14:26:24.904Z"
+  },
+  {
+    "claim_id": "clm_0044",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Khaled Talhouni is the co‑founder of Nuwa Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0064",
+    "created_at": "2026-09-20T14:26:24.904Z"
+  },
+  {
+    "claim_id": "clm_0044",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorised individual of Nuwa Capital Limited but does not state that he is a co‑founder.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0065",
+    "created_at": "2026-09-20T14:26:24.904Z"
+  },
+  {
+    "claim_id": "clm_0044",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The DFSA register confirms Khaled Talhouni's association with Nuwa Capital Limited but lists his functions only as 'Licensed Director, Senior Executive Officer' and is silent on whether he is a co-founder, so it neither supports nor contradicts the specific founding claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0066",
+    "created_at": "2026-09-20T14:26:24.904Z"
+  },
+  {
+    "claim_id": "clm_0044",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an 'Authorised Individual' at Nuwa Capital Limited but says nothing about whether he is a co-founder, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0067",
+    "created_at": "2026-09-20T14:26:24.904Z"
+  },
+  {
+    "claim_id": "clm_0047",
+    "source_id": "src_0022",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Khaled Talhouni is the Founder and Managing Partner of Nuwa Capital.",
+    "reasoning": "The document explicitly states the claim verbatim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0068",
+    "created_at": "2026-09-20T14:27:40.169Z"
+  },
+  {
+    "claim_id": "clm_0047",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Khaled Talhouni is the Founder and Managing Partner of Nuwa Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0069",
+    "created_at": "2026-09-20T14:27:40.169Z"
+  },
+  {
+    "claim_id": "clm_0047",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Khaled Talhouni as an authorized individual for Nuwa Capital Limited but does not provide any statement indicating that he is the Founder and Managing Partner.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0070",
+    "created_at": "2026-09-20T14:27:40.169Z"
+  },
+  {
+    "claim_id": "clm_0047",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Functions\nLicensed Director,Senior Executive Officer",
+    "reasoning": "The DFSA register lists Khaled Talhouni's functions at Nuwa Capital Limited as 'Licensed Director, Senior Executive Officer,' not 'Founder and Managing Partner' as the claim states.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0071",
+    "created_at": "2026-09-20T14:27:40.169Z"
+  },
+  {
+    "claim_id": "clm_0047",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an Authorised Individual at Nuwa Capital Limited but does not state his specific title or role such as Founder or Managing Partner, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0072",
+    "created_at": "2026-09-20T14:27:40.169Z"
+  },
+  {
+    "claim_id": "clm_0052",
+    "source_id": "src_0023",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Nuwa Capital has successfully backed several innovative startups, including Eyewa, Seez, Silkhaus, Calo, and many more.",
+    "reasoning": "The source explicitly states that Nuwa Capital has backed Eyewa.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0073",
+    "created_at": "2026-09-20T14:28:55.216Z"
+  },
+  {
+    "claim_id": "clm_0052",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Nuwa Capital Limited as a firm associated with Mr Khaled Talhouni but contains no mention of Eyewa or any backing relationship.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0074",
+    "created_at": "2026-09-20T14:28:55.216Z"
+  },
+  {
+    "claim_id": "clm_0052",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no reference to Eyewa or any backing activity by Nuwa Capital.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0075",
+    "created_at": "2026-09-20T14:28:55.216Z"
+  },
+  {
+    "claim_id": "clm_0052",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA public register entry confirming Nuwa Capital Limited as an authorised firm and listing Mr Khaled Talhouni as an authorised individual there, but it contains no mention of Eyewa or any investment/backing relationship.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0076",
+    "created_at": "2026-09-20T14:28:55.216Z"
+  },
+  {
+    "claim_id": "clm_0052",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA regulatory register entry that lists Nuwa Capital's licence, services, and authorised individuals, but contains no mention of Eyewa or any specific portfolio company, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0077",
+    "created_at": "2026-09-20T14:28:55.216Z"
+  },
+  {
+    "claim_id": "clm_0002",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Functions Licensed Director,Senior Executive Officer",
+    "reasoning": "The document lists Mr Khaled Talhouni’s functions as “Licensed Director,Senior Executive Officer”, confirming he holds the title of Senior Executive Officer at Nuwa Capital Limited.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0078",
+    "created_at": "2026-09-20T14:30:09.560Z"
+  },
+  {
+    "claim_id": "clm_0002",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Mr Khaled Talhouni as an authorised individual but does not state that he holds the title of Senior Executive Officer.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0079",
+    "created_at": "2026-09-20T14:30:09.560Z"
+  },
+  {
+    "claim_id": "clm_0002",
+    "source_id": "src_0004",
+    "pass": 2,
+    "stance": "contradicts",
+    "quote": "Khaled TalhouniManaging Partner",
+    "reasoning": "The document identifies Khaled Talhouni's title as 'Managing Partner,' not 'Senior Executive Officer,' which is a different role designation.",
+    "predicate_match": {
+      "value": null,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0080",
+    "created_at": "2026-09-20T14:30:09.560Z"
+  },
+  {
+    "claim_id": "clm_0002",
+    "source_id": "src_0014",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of Khaled Talhouni or any individual's role at Nuwa Capital Limited, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0081",
+    "created_at": "2026-09-20T14:30:09.560Z"
+  },
+  {
+    "claim_id": "clm_0006",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Legal Status:\nDIFC Company",
+    "reasoning": "The document explicitly lists the legal status of Nuwa Capital Limited as a DIFC Company.",
+    "predicate_match": {
+      "value": true,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0082",
+    "created_at": "2026-09-20T14:31:24.748Z"
+  },
+  {
+    "claim_id": "clm_0006",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document lists Nuwa Capital Limited as a firm in the DFSA register but does not explicitly state that it is a DIFC Company.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0083",
+    "created_at": "2026-09-20T14:31:24.748Z"
+  },
+  {
+    "claim_id": "clm_0006",
+    "source_id": "src_0004",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Nuwa Capital Limited is a company established in the DIFC pursuant to the DIFC Companies Law with registration number CL4036.",
+    "reasoning": "The source explicitly states that Nuwa Capital Limited is established in the DIFC, confirming the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0084",
+    "created_at": "2026-09-20T14:31:24.748Z"
+  },
+  {
+    "claim_id": "clm_0006",
+    "source_id": "src_0003",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document contains no mention of Nuwa Capital Limited or DIFC; it is entirely about Wamda Capital and its activities, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0085",
+    "created_at": "2026-09-20T14:31:24.748Z"
+  },
+  {
+    "claim_id": "clm_0006",
+    "source_id": "src_0008",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document identifies the company simply as 'Nuwa Capital' and lists its headquarters as 'Saudi Arabia; U.A.E.' but is silent on its legal registration or whether it is specifically a DIFC company.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0086",
+    "created_at": "2026-09-20T14:31:24.748Z"
+  },
+  {
+    "claim_id": "clm_0008",
+    "source_id": "src_0004",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Nuwa Capital Limited is regulated by the DFSA for the provision of Managing a Collective Investment Fund and Advising on Financial Products (Units).",
+    "reasoning": "The document explicitly states that Nuwa Capital Limited is regulated by the DFSA for the specified activities.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0087",
+    "created_at": "2026-09-20T14:32:40.148Z"
+  },
+  {
+    "claim_id": "clm_0008",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Firm Name\n\nNuwa Capital Limited",
+    "reasoning": "The document lists Nuwa Capital Limited under the section for Authorised Firms, indicating it is regulated by the DFSA.",
+    "predicate_match": {
+      "value": true,
+      "measures": false,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0088",
+    "created_at": "2026-09-20T14:32:40.148Z"
+  },
+  {
+    "claim_id": "clm_0008",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Managing a Collective Investment Fund",
+    "reasoning": "The document lists \"Managing a Collective Investment Fund\" under the firm’s financial services, indicating that Nuwa Capital Limited is regulated by the DFSA for that activity.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0089",
+    "created_at": "2026-09-20T14:32:40.148Z"
+  },
+  {
+    "claim_id": "clm_0008",
+    "source_id": "src_0003",
+    "pass": 2,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document is about Wamda Capital, not Nuwa Capital Limited; there is no mention of Nuwa Capital Limited or any DFSA regulation in this source.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": false,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0090",
+    "created_at": "2026-09-20T14:32:40.148Z"
+  },
+  {
+    "claim_id": "clm_0008",
+    "source_id": "src_0008",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document mentions Nuwa Capital but is entirely silent on any regulatory status, DFSA oversight, or the specific activities of managing a collective investment fund or advising on financial products.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0091",
+    "created_at": "2026-09-20T14:32:40.148Z"
+  },
+  {
+    "claim_id": "clm_0013",
+    "source_id": "src_0014",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "All communications and services are directed at Professional Clients only, persons other than Professional Clients, such as any Person who is classified Retail Clients, are NOT the intended recipients of our communications or services.",
+    "reasoning": "The document explicitly states that all communications and services are directed only to professional clients, matching the claim.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0092",
+    "created_at": "2026-09-20T14:33:55.200Z"
+  },
+  {
+    "claim_id": "clm_0013",
+    "source_id": "src_0001",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Nuwa Capital Limited directs all communications and services only to professional clients.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0093",
+    "created_at": "2026-09-20T14:33:55.200Z"
+  },
+  {
+    "claim_id": "clm_0013",
+    "source_id": "src_0002",
+    "pass": 1,
+    "stance": "not_found",
+    "quote": "",
+    "reasoning": "The document does not contain any statement indicating that Nuwa Capital Limited directs all communications and services only to professional clients.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0094",
+    "created_at": "2026-09-20T14:33:55.200Z"
+  },
+  {
+    "claim_id": "clm_0013",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA public register entry listing Mr Khaled Talhouni as an authorised individual at Nuwa Capital Limited, but it contains no information about the firm's client types, communication policies, or whether it serves only professional clients.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0095",
+    "created_at": "2026-09-20T14:33:55.200Z"
+  },
+  {
+    "claim_id": "clm_0013",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA public register entry that lists the firm's financial services and restrictions but contains no statement about whether Nuwa Capital Limited directs its communications and services exclusively to professional clients.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0096",
+    "created_at": "2026-09-20T14:33:55.200Z"
+  },
+  {
+    "claim_id": "clm_0017",
+    "source_id": "src_0026",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "LocationDubai, United Arab EmiratesRiyadh, Saudi ArabiaCairo, Egypt",
+    "reasoning": "The document lists Dubai, Riyadh, and Cairo as locations for Nuwa Capital Limited.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": true
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0097",
+    "created_at": "2026-09-20T14:36:24.939Z"
+  },
+  {
+    "claim_id": "clm_0017",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Nuwa Capital Limited is registered with the DFSA (Dubai Financial Services Authority) but provides no information about its locations in Riyadh or Cairo, nor does it explicitly list its office locations.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0098",
+    "created_at": "2026-09-20T14:36:24.939Z"
+  },
+  {
+    "claim_id": "clm_0017",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms a Dubai address for Nuwa Capital Limited but is entirely silent on any locations in Riyadh or Cairo, so it neither supports nor contradicts the full claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0099",
+    "created_at": "2026-09-20T14:36:24.939Z"
+  },
+  {
+    "claim_id": "clm_0020",
+    "source_id": "src_0003",
+    "pass": 1,
+    "stance": "supports",
+    "quote": "Throughout his career, he has led or participated in over 60 venture capital transactions",
+    "reasoning": "The document explicitly states that Khaled Talhouni has led or participated in over 60 venture capital transactions, matching the claim’s value, measure, and population.",
+    "predicate_match": {
+      "value": true,
+      "measures": true,
+      "population": true,
+      "time": null
+    },
+    "model": "openai/gpt-oss-20b",
+    "id": "ev_0100",
+    "created_at": "2026-09-20T14:39:10.181Z"
+  },
+  {
+    "claim_id": "clm_0020",
+    "source_id": "src_0001",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document is a DFSA regulatory register entry confirming Khaled Talhouni's role at Nuwa Capital Limited but is entirely silent on the number of venture capital transactions he has led or participated in, so it neither supports nor contradicts the claim.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0101",
+    "created_at": "2026-09-20T14:39:10.181Z"
+  },
+  {
+    "claim_id": "clm_0020",
+    "source_id": "src_0002",
+    "pass": 2,
+    "stance": "neutral",
+    "quote": "",
+    "reasoning": "The document confirms Khaled Talhouni is an authorised individual at Nuwa Capital Limited, a firm restricted to Venture Capital Fund management, but it contains no information about the number of transactions he has led or participated in, so it neither supports nor contradicts the 'over 60' figure.",
+    "predicate_match": {
+      "value": null,
+      "measures": null,
+      "population": null,
+      "time": null
+    },
+    "model": "qwen/qwen3.8-27b",
+    "id": "ev_0102",
+    "created_at": "2026-09-20T14:39:10.181Z"
+  }
+]
