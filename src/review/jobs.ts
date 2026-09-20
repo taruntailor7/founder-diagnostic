@@ -25,6 +25,16 @@ export interface JobRequest {
   role: string;
   selfDomain: string;
   location: string;
+  /**
+   * Starting URLs, one per line.
+   *
+   * Required in practice on a hosted instance. Search engines refuse requests
+   * from datacenter addresses, so discovery returns nothing and the harvest has
+   * no pages to read. Supplying starting points is not a workaround for a
+   * missing feature; it is how an operator points the tool at the register
+   * entry and the coverage they already know about.
+   */
+  seeds: string;
 }
 
 export interface Job {
@@ -70,6 +80,12 @@ export function validate(req: Partial<JobRequest>): string[] {
     );
   }
 
+  for (const line of parseSeeds(req.seeds ?? "")) {
+    if (!/^https?:\/\/\S+$/.test(line)) {
+      problems.push(`Not a URL: ${line.slice(0, 60)}`);
+    }
+  }
+
   return problems;
 }
 
@@ -85,6 +101,14 @@ function normaliseDomain(raw: string): string {
     .replace(/^https?:\/\//, "")
     .replace(/^www\./, "")
     .split("/")[0] ?? "";
+}
+
+/** One URL per line, blanks and comments ignored. */
+export function parseSeeds(raw: string): string[] {
+  return raw
+    .split(/[\r\n]+/)
+    .map((line) => line.trim())
+    .filter((line) => line !== "" && !line.startsWith("#"));
 }
 
 export function start(req: JobRequest): Job {
@@ -104,6 +128,8 @@ export function start(req: JobRequest): Job {
 
   const domain = normaliseDomain(req.selfDomain);
   if (domain) args.push("--self-domain", domain);
+
+  for (const seed of parseSeeds(req.seeds)) args.push("--seed", seed);
 
   const job: Job = {
     id: `job_${Date.now()}`,

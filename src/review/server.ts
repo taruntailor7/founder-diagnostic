@@ -428,6 +428,7 @@ export async function createServer(
       role: String(req.body?.role ?? ""),
       selfDomain: String(req.body?.selfDomain ?? ""),
       location: String(req.body?.location ?? ""),
+      seeds: String(req.body?.seeds ?? ""),
     };
 
     const problems = validate(request);
