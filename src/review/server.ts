@@ -125,19 +125,20 @@ pre.logs { background:#13161a; color:#d7dde4; border-radius:8px; padding:14px 16
 const FREE_TIER_NOTICE = `
 <div class="notice">
   <h3>Running on free models, which is why this takes minutes rather than seconds</h3>
-  <p style="margin:0 0 4px">
-    The models are Groq's free tier. The constraint is tokens per minute, not
-    compute: each verification call is roughly 2,000 tokens against an 8,000
-    token minute, so four calls a minute is the ceiling. One profile needs about
-    160 calls.
+  <p style="margin:0 0 6px">
+    One profile is about 160 model calls and roughly 345,000 tokens, measured
+    from the recorded run. The models here are Groq's free tier, which allows
+    8,000 tokens a minute, so four calls a minute is the ceiling.
   </p>
   <table>
-    <tr><td>Free tier</td><td><strong>about 40 minutes</strong> per profile, and the 200,000 token daily cap is not enough to finish one</td></tr>
-    <tr><td>Paid tier</td><td><strong>3 to 5 minutes</strong>, at roughly 5 to 10 cents per profile</td></tr>
+    <tr><td>Free tier</td><td><strong>about 40 minutes</strong>, and the 200,000 token daily cap is not enough to finish one profile</td></tr>
+    <tr><td>Paid tier</td><td><strong>under ten minutes</strong>. The calls are not rate limited but still run one at a time, at three to four seconds each</td></tr>
   </table>
-  <p style="margin:4px 0 0">
-    Switching is one line in <code>.env</code>: the provider and the three model
-    names are configuration, not code. Nothing else changes.
+  <p style="margin:6px 0 0">
+    Switching provider is one line in <code>.env</code>. Running calls
+    concurrently would cut the paid figure substantially and is not implemented.
+    Cost depends on your provider's rate for 345,000 tokens; this has not been
+    run on a paid key, so no figure is quoted.
   </p>
 </div>`;
 

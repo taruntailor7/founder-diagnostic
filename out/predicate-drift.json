@@ -26,8 +26,8 @@
     "refusal_note": "source src_drift_001 supports the figure but not its measures and population",
     "evidence_ids": [],
     "footnote_id": null,
-    "created_at": "2026-09-20T13:43:42.509Z",
-    "updated_at": "2026-09-20T13:43:42.509Z"
+    "created_at": "2026-09-20T16:17:21.320Z",
+    "updated_at": "2026-09-20T16:17:21.320Z"
   },
   "source": {
     "id": "src_drift_001",
@@ -39,7 +39,7 @@
     "tier": 1,
     "tier_label": "aggregator",
     "published_at": "2026-09-18",
-    "accessed_at": "2026-09-20T13:43:42.540Z",
+    "accessed_at": "2026-09-20T16:17:21.350Z",
     "content_sha256": "c1fa8207af7b811f92602567e3726a4c949d75caa1e534c76208394818236019",
     "cache_path": "fixtures/http/5b9a92bf3feefe76b444ed1b7cb7be11e97eac3e69933fabdedf22dc2288a2c0.json",
     "fetch_method": "http",
@@ -63,7 +63,7 @@
     },
     "model": "openai/gpt-oss-20b",
     "id": "ev_drift_001",
-    "created_at": "2026-09-20T13:43:42.541Z"
+    "created_at": "2026-09-20T16:17:21.351Z"
   },
   "label": {
     "status": "UNVERIFIED",
