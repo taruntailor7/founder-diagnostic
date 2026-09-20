@@ -1,0 +1,59 @@
+# Render blueprint. Auto-deploys on every push to main.
+#
+# The free plan has no persistent disk and sleeps after fifteen minutes idle,
+# which is acceptable here for one reason: the ledger, the fixtures and the
+# rendered diagnostic are committed to the repository. Every deploy therefore
+# starts with the completed assessment already present, and Review and
+# Diagnostic work immediately on a cold start.
+#
+# What the free plan does not survive is a run started on the live instance.
+# Those writes live on ephemeral disk and are lost when the service sleeps.
+# Attach a disk at /opt/render/project/src/ledger to change that.
+
+services:
+  - type: web
+    name: founder-diagnostic
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    autoDeploy: true
+
+    buildCommand: npm ci --omit=dev
+    startCommand: npm run review
+
+    healthCheckPath: /healthz
+
+    envVars:
+      # Render routes to the container, not to loopback. The server refuses to
+      # bind here unless APP_PASSWORD is also set.
+      - key: HOST
+        value: 0.0.0.0
+
+      - key: NODE_VERSION
+        value: "22.16.0"
+
+      # Named in the audit log against every approval, so it can never be
+      # anonymous. The server will not start without it.
+      - key: REVIEWER
+        value: Tarun Tailor
+
+      # Set in the Render dashboard, not here.
+      - key: APP_PASSWORD
+        sync: false
+
+      # Optional. Without it the deployed instance still serves the committed
+      # assessment; only starting a new run needs a key.
+      - key: LLM_API_KEY
+        sync: false
+
+      - key: LLM_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: MODEL_EXTRACT
+        value: openai/gpt-oss-20b
+      - key: MODEL_CONFIRM
+        value: openai/gpt-oss-20b
+      - key: MODEL_DISCONFIRM
+        value: qwen/qwen3.8-27b
+      - key: LLM_RPM
+        value: "4"

@@ -17,6 +17,7 @@ import { paths, ROOT } from "../config.ts";
 import { readJson } from "../ledger/store.ts";
 import { log } from "../log.ts";
 import { cancel, currentJob, isRunning, start, validate } from "./jobs.ts";
+import { passwordGate } from "./auth.ts";
 import { REFUSAL_EXPLANATION } from "../verify/label.ts";
 import { TIER_LABEL } from "../types.ts";
 import type { Claim, Decision, Evidence, Source, Subject } from "../types.ts";
@@ -245,9 +246,21 @@ async function renderDocument(): Promise<{ ok: boolean; output: string }> {
   }
 }
 
-export async function createServer(): Promise<express.Express> {
+export interface ServerOptions {
+  /** Empty on localhost, where the operating system is the access control. */
+  password?: string;
+}
+
+export async function createServer(
+  options: ServerOptions = {},
+): Promise<express.Express> {
   const who = requireReviewer();
   const app = express();
+
+  // Health check answers before the gate, or the host marks the service down.
+  app.get("/healthz", (_req: Request, res: Response) => res.type("text").send("ok"));
+
+  if (options.password) app.use(passwordGate(options.password));
   app.use(express.urlencoded({ extended: false }));
 
   const queueSize = async (): Promise<number> => {
