@@ -5,10 +5,10 @@ company: Nuwa Capital
 linkedin: https://www.linkedin.com/in/khaledtalhouni/
 assessed_at: 2026-09-20
 pipeline_version: 1.0.0
-claims_extracted: 53
-verified: 1
-partially_verified: 7
-refused: 19
+claims_extracted: 49
+verified: 3
+partially_verified: 3
+refused: 16
 ---
 
 # Khaled Talhouni
@@ -17,20 +17,17 @@ Founder and Managing Partner, Nuwa Capital. Public-source diagnostic.
 
 ## Who they are
 
-Nuwa Capital Limited is a DIFC Company.[^2]
+Nuwa Capital Limited is a DIFC Company.[^4]
 
-Khaled Talhouni is the Managing Partner of Nuwa Capital.[^3]
-
-Nuwa Capital has a location in Dubai, United Arab Emirates.[^4]
+Nuwa Capital Limited has locations in Dubai, Riyadh, Cairo.[^6]
 
 
 ## Verified factual base
 
-- [PV] Mr Khaled Talhouni is listed as an individual with DFSA Reference Number I011374.[^1]
-- [PV] Mr Khaled Talhouni is an Authorised Individual.[^5]
-- [PV] Nuwa Capital Limited has DFSA reference number F006325.[^6]
-- [PV] Nuwa Capital Limited is regulated by the DFSA for the provision of Managing a Collective Investment Fund and Advising on Financial Products (Units).[^7]
-- [PV] All communications and services of Nuwa Capital Limited are directed at Professional Clients only.[^8]
+- [PV] Khaled Talhouni is an authorized individual of Nuwa Capital Limited effective 19-Nov-2020.[^1]
+- [V] Nuwa Capital Limited restricts managing a collective investment fund and advising on financial products to qualified investor funds that take the form of venture capital funds.[^2]
+- [V] Nuwa Capital Limited is regulated by the DFSA for the provision of Managing a Collective Investment Fund and Advising on Financial Products (Units).[^3]
+- [PV] Nuwa Capital Limited directs all communications and services only to professional clients.[^5]
 
 ## Three gaps
 
@@ -64,21 +61,19 @@ Nuwa Capital has a location in Dubai, United Arab Emirates.[^4]
 
 Each of these circulates publicly. None of them could be established from a source we would defend, so none appears above.
 
-- `PASSES_DISAGREE` **Nuwa Capital Limited is a company established in the DIFC pursuant to the DIFC Companies Law with registration number CL4036.** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically. Confirming pass returned supports, disconfirming pass returned contradicts.
-- `PASSES_DISAGREE` **Khaled Talhouni is the managing partner at Wamda Capital.** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically. Confirming pass returned supports, disconfirming pass returned contradicts.
-- `NO_PRIMARY` **Talhouni cofounded Nuwa Capital in 2020.** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- `NO_PRIMARY` **Khaled Talhouni authored the article "Sharing our way out of malaise: MENA and the sharing economy".** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- `NO_PRIMARY` **Khaled Talhouni co‑founded Nuwa Capital.** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- `NO_PRIMARY` **Nuwa Capital announced the first close of its $100 million NVFI fund in February.** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- `NO_PRIMARY` **Nuwa Capital closed its debut fund.** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
+- `PREDICATE_DRIFT` **Mr Khaled Talhouni is a Licensed Director of Nuwa Capital Limited.** The figure is real and the cited study exists, but the figure measures something other than what the claim asserts. Source src_0002 supports the figure but not its measures.
+- `PREDICATE_DRIFT` **Nuwa Capital Limited is regulated by the DFSA for the provision of managing a collective investment fund and advising on financial products.** The figure is real and the cited study exists, but the figure measures something other than what the claim asserts. Source src_0001 supports the figure but not its measures.
+- `CONFLICTING_VALUES` **Khaled Talhouni is a Managing Partner at Nuwa Capital Ltd.** Credible sources disagree on the value or date, and nothing authoritative settles it. 1 source(s) contradict this claim.
+- `CONFLICTING_VALUES` **Khaled Talhouni was Managing Partner at Wamda Capital.** Credible sources disagree on the value or date, and nothing authoritative settles it. 2 source(s) contradict this claim.
+- `PASSES_DISAGREE` **Khaled Talhouni is Managing Partner of Nuwa Capital.** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically. Confirming pass returned supports, disconfirming pass returned contradicts.
+- `PASSES_DISAGREE` **Khaled Talhouni is the Managing Partner of Nuwa Capital.** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically. Confirming pass returned supports, disconfirming pass returned contradicts.
+- `PASSES_DISAGREE` **Khaled Talhouni is Founder & Managing Partner at Nuwa Capital.** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically. Confirming pass returned supports, disconfirming pass returned contradicts.
 
 The remainder are listed in full in `out/refusals.md` and in `ledger/claims.json`, each with its code and reasoning.
 
 ## Sources
 
-- DFSA (DFSA, primary, undated) https://www.dfsa.ae/public-register/individuals/mr-khaled-talhouni
 - DFSA (DFSA, primary, undated) https://www.dfsa.ae/public-register/firms/nuwa-capital-limited
-- Nuwa Capital (Nuwacapital, self_reported, undated) https://www.nuwacapital.io/
 - Insights (Nuwacapital, self_reported, undated) https://www.nuwacapital.io/insights
 - Contact (Nuwacapital, self_reported, undated) https://www.nuwacapital.io/contact
 
@@ -93,14 +88,12 @@ The LinkedIn URL is used only as an identity anchor. Post history requires a log
 Nothing appears in this document without a recorded human approval. The renderer exits with an error rather than emit a claim that lacks one.
 
 
-[^1]: claim:clm_0001 | https://www.dfsa.ae/public-register/individuals/mr-khaled-talhouni | DFSA, primary, undated, accessed 2026-09-19
-[^2]: claim:clm_0005 | https://www.dfsa.ae/public-register/firms/nuwa-capital-limited | DFSA, primary, undated, accessed 2026-09-19
-[^3]: claim:clm_0009 | https://www.nuwacapital.io/ | Nuwacapital, self_reported, undated, accessed 2026-09-19
-[^4]: claim:clm_0019 | https://www.nuwacapital.io/contact | Nuwacapital, self_reported, undated, accessed 2026-09-19
-[^5]: claim:clm_0002 | https://www.dfsa.ae/public-register/individuals/mr-khaled-talhouni | DFSA, primary, undated, accessed 2026-09-19
-[^6]: claim:clm_0006 | https://www.dfsa.ae/public-register/firms/nuwa-capital-limited | DFSA, primary, undated, accessed 2026-09-19
-[^7]: claim:clm_0010 | https://www.nuwacapital.io/ | Nuwacapital, self_reported, undated, accessed 2026-09-19
-[^8]: claim:clm_0015 | https://www.nuwacapital.io/insights | Nuwacapital, self_reported, undated, accessed 2026-09-19
+[^1]: claim:clm_0005 | https://www.dfsa.ae/public-register/firms/nuwa-capital-limited | DFSA, primary, undated, accessed 2026-09-19
+[^2]: claim:clm_0012 | https://www.nuwacapital.io/insights | Nuwacapital, self_reported, undated, accessed 2026-09-19
+[^3]: claim:clm_0015 | https://www.nuwacapital.io/contact | Nuwacapital, self_reported, undated, accessed 2026-09-19
+[^4]: claim:clm_0006 | https://www.dfsa.ae/public-register/firms/nuwa-capital-limited | DFSA, primary, undated, accessed 2026-09-19
+[^5]: claim:clm_0013 | https://www.nuwacapital.io/insights | Nuwacapital, self_reported, undated, accessed 2026-09-19
+[^6]: claim:clm_0017 | https://www.nuwacapital.io/contact | Nuwacapital, self_reported, undated, accessed 2026-09-19
 [^g1]: source:src_0003 | computed by this tool from the ledger, PROOF_GAP | 12 dated source(s) including Wamda https://www.wamda.com/en/author/khaledtalhouni
 [^g2]: source:src_0017 | computed by this tool from the ledger, CADENCE_GAP | 8 dated source(s) including The National https://www.thenationalnews.com/business/technology/nuwa-capital-aims-to-close-100m-fund-by-end-of-year-as-it-taps-into-mena-s-tech-boom-1.1166634
 [^g3]: source:src_0001 | computed by this tool from the ledger, NARRATIVE_OWNERSHIP_GAP | 6 dated source(s) including DFSA https://www.dfsa.ae/public-register/individuals/mr-khaled-talhouni

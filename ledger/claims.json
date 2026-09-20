@@ -12,14 +12,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0001",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PREDICATE_DRIFT",
+    "refusal_note": "source src_0002 supports the figure but not its measures",
+    "evidence_ids": [
+      "ev_0001",
+      "ev_0002",
+      "ev_0003",
+      "ev_0004",
+      "ev_0005"
+    ],
     "footnote_id": null,
     "id": "clm_0001",
     "created_at": "2026-09-20T13:59:24.637Z",
-    "updated_at": "2026-09-20T13:59:24.637Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -38,14 +44,20 @@
       }
     },
     "derived_from_source_id": "src_0002",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "PARTIALLY_VERIFIED",
+    "refusal_code": "UNCORROBORATED",
+    "refusal_note": "a primary record establishes this, but no independent source corroborates it",
+    "evidence_ids": [
+      "ev_0006",
+      "ev_0007",
+      "ev_0008",
+      "ev_0009",
+      "ev_0010"
+    ],
     "footnote_id": null,
     "id": "clm_0005",
     "created_at": "2026-09-20T13:59:54.635Z",
-    "updated_at": "2026-09-20T13:59:54.635Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -60,14 +72,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0004",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0011",
+      "ev_0012",
+      "ev_0013",
+      "ev_0014",
+      "ev_0015"
+    ],
     "footnote_id": null,
     "id": "clm_0007",
     "created_at": "2026-09-20T14:00:25.374Z",
-    "updated_at": "2026-09-20T14:00:25.374Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -82,14 +100,19 @@
       "time": null
     },
     "derived_from_source_id": "src_0014",
-    "status": "pending",
+    "status": "VERIFIED",
     "refusal_code": null,
     "refusal_note": null,
-    "evidence_ids": [],
+    "evidence_ids": [
+      "ev_0016",
+      "ev_0017",
+      "ev_0018",
+      "ev_0019"
+    ],
     "footnote_id": null,
     "id": "clm_0012",
     "created_at": "2026-09-20T14:00:39.735Z",
-    "updated_at": "2026-09-20T14:00:39.735Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -104,14 +127,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0026",
-    "status": "pending",
+    "status": "VERIFIED",
     "refusal_code": null,
     "refusal_note": null,
-    "evidence_ids": [],
+    "evidence_ids": [
+      "ev_0020",
+      "ev_0021",
+      "ev_0022",
+      "ev_0023",
+      "ev_0024"
+    ],
     "footnote_id": null,
     "id": "clm_0015",
     "created_at": "2026-09-20T14:00:54.824Z",
-    "updated_at": "2026-09-20T14:00:54.824Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -126,14 +155,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0003",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "CONFLICTING_VALUES",
+    "refusal_note": "1 source(s) contradict this claim",
+    "evidence_ids": [
+      "ev_0025",
+      "ev_0026",
+      "ev_0027",
+      "ev_0028",
+      "ev_0029"
+    ],
     "footnote_id": null,
     "id": "clm_0019",
     "created_at": "2026-09-20T14:05:24.848Z",
-    "updated_at": "2026-09-20T14:05:24.848Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -148,14 +183,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0008",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0030",
+      "ev_0031",
+      "ev_0032",
+      "ev_0033",
+      "ev_0034"
+    ],
     "footnote_id": null,
     "id": "clm_0021",
     "created_at": "2026-09-20T14:01:40.084Z",
-    "updated_at": "2026-09-20T14:01:40.084Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -178,14 +219,20 @@
       }
     },
     "derived_from_source_id": "src_0019",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "no supporting source found",
+    "evidence_ids": [
+      "ev_0035",
+      "ev_0036",
+      "ev_0037",
+      "ev_0038",
+      "ev_0039"
+    ],
     "footnote_id": null,
     "id": "clm_0026",
     "created_at": "2026-09-20T14:03:40.081Z",
-    "updated_at": "2026-09-20T14:03:40.081Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -208,14 +255,20 @@
       }
     },
     "derived_from_source_id": "src_0020",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "evidence does not meet any verification rule",
+    "evidence_ids": [
+      "ev_0040",
+      "ev_0041",
+      "ev_0042",
+      "ev_0043",
+      "ev_0044"
+    ],
     "footnote_id": null,
     "id": "clm_0030",
     "created_at": "2026-09-20T14:04:10.019Z",
-    "updated_at": "2026-09-20T14:04:10.019Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -234,14 +287,19 @@
       "time": null
     },
     "derived_from_source_id": "src_0007",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "every supporting source is an aggregator",
+    "evidence_ids": [
+      "ev_0045",
+      "ev_0046",
+      "ev_0047",
+      "ev_0048"
+    ],
     "footnote_id": null,
     "id": "clm_0031",
     "created_at": "2026-09-20T14:04:41.754Z",
-    "updated_at": "2026-09-20T14:04:41.754Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -256,14 +314,19 @@
       "time": null
     },
     "derived_from_source_id": "src_0010",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "CONFLICTING_VALUES",
+    "refusal_note": "2 source(s) contradict this claim",
+    "evidence_ids": [
+      "ev_0049",
+      "ev_0050",
+      "ev_0051",
+      "ev_0052"
+    ],
     "footnote_id": null,
     "id": "clm_0035",
     "created_at": "2026-09-20T14:04:54.738Z",
-    "updated_at": "2026-09-20T14:04:54.738Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -278,14 +341,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0011",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0053",
+      "ev_0054",
+      "ev_0055",
+      "ev_0056",
+      "ev_0057"
+    ],
     "footnote_id": null,
     "id": "clm_0038",
     "created_at": "2026-09-20T14:05:09.004Z",
-    "updated_at": "2026-09-20T14:05:09.004Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -300,14 +369,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0012",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0058",
+      "ev_0059",
+      "ev_0060",
+      "ev_0061",
+      "ev_0062"
+    ],
     "footnote_id": null,
     "id": "clm_0040",
     "created_at": "2026-09-20T14:05:24.848Z",
-    "updated_at": "2026-09-20T14:05:24.848Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -322,14 +397,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0013",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "every supporting source is an aggregator",
+    "evidence_ids": [
+      "ev_0063",
+      "ev_0064",
+      "ev_0065",
+      "ev_0066",
+      "ev_0067"
+    ],
     "footnote_id": null,
     "id": "clm_0044",
     "created_at": "2026-09-20T14:05:39.880Z",
-    "updated_at": "2026-09-20T14:05:39.880Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -344,14 +425,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0022",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0068",
+      "ev_0069",
+      "ev_0070",
+      "ev_0071",
+      "ev_0072"
+    ],
     "footnote_id": null,
     "id": "clm_0047",
     "created_at": "2026-09-20T14:06:10.481Z",
-    "updated_at": "2026-09-20T14:06:10.481Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -366,14 +453,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0023",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "every supporting source is an aggregator",
+    "evidence_ids": [
+      "ev_0073",
+      "ev_0074",
+      "ev_0075",
+      "ev_0076",
+      "ev_0077"
+    ],
     "footnote_id": null,
     "id": "clm_0052",
     "created_at": "2026-09-20T14:06:24.768Z",
-    "updated_at": "2026-09-20T14:06:24.768Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -388,14 +481,19 @@
       "time": null
     },
     "derived_from_source_id": "src_0001",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PASSES_DISAGREE",
+    "refusal_note": "confirming pass returned supports, disconfirming pass returned contradicts",
+    "evidence_ids": [
+      "ev_0078",
+      "ev_0079",
+      "ev_0080",
+      "ev_0081"
+    ],
     "footnote_id": null,
     "id": "clm_0002",
     "created_at": "2026-09-20T13:59:24.637Z",
-    "updated_at": "2026-09-20T13:59:24.637Z"
+    "updated_at": "2026-09-20T14:57:04.027Z"
   },
   {
     "subject_id": "subj_001",
@@ -410,14 +508,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0002",
-    "status": "pending",
+    "status": "VERIFIED",
     "refusal_code": null,
     "refusal_note": null,
-    "evidence_ids": [],
+    "evidence_ids": [
+      "ev_0082",
+      "ev_0083",
+      "ev_0084",
+      "ev_0085",
+      "ev_0086"
+    ],
     "footnote_id": null,
     "id": "clm_0006",
     "created_at": "2026-09-20T13:59:54.635Z",
-    "updated_at": "2026-09-20T13:59:54.635Z"
+    "updated_at": "2026-09-20T14:57:04.028Z"
   },
   {
     "subject_id": "subj_001",
@@ -432,14 +536,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0004",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "PREDICATE_DRIFT",
+    "refusal_note": "source src_0001 supports the figure but not its measures",
+    "evidence_ids": [
+      "ev_0087",
+      "ev_0088",
+      "ev_0089",
+      "ev_0090",
+      "ev_0091"
+    ],
     "footnote_id": null,
     "id": "clm_0008",
     "created_at": "2026-09-20T14:00:25.374Z",
-    "updated_at": "2026-09-20T14:00:25.374Z"
+    "updated_at": "2026-09-20T14:57:04.028Z"
   },
   {
     "subject_id": "subj_001",
@@ -454,14 +564,20 @@
       "time": null
     },
     "derived_from_source_id": "src_0014",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "PARTIALLY_VERIFIED",
+    "refusal_code": "SELF_REPORTED_ONLY",
+    "refusal_note": "the only source is the subject describing themselves",
+    "evidence_ids": [
+      "ev_0092",
+      "ev_0093",
+      "ev_0094",
+      "ev_0095",
+      "ev_0096"
+    ],
     "footnote_id": null,
     "id": "clm_0013",
     "created_at": "2026-09-20T14:00:39.735Z",
-    "updated_at": "2026-09-20T14:00:39.735Z"
+    "updated_at": "2026-09-20T14:57:04.028Z"
   },
   {
     "subject_id": "subj_001",
@@ -476,14 +592,18 @@
       "time": null
     },
     "derived_from_source_id": "src_0026",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "PARTIALLY_VERIFIED",
+    "refusal_code": "SELF_REPORTED_ONLY",
+    "refusal_note": "the only source is the subject describing themselves",
+    "evidence_ids": [
+      "ev_0097",
+      "ev_0098",
+      "ev_0099"
+    ],
     "footnote_id": null,
     "id": "clm_0017",
     "created_at": "2026-09-20T14:00:54.824Z",
-    "updated_at": "2026-09-20T14:00:54.824Z"
+    "updated_at": "2026-09-20T14:57:04.028Z"
   },
   {
     "subject_id": "subj_001",
@@ -502,14 +622,18 @@
       "time": null
     },
     "derived_from_source_id": "src_0003",
-    "status": "pending",
-    "refusal_code": null,
-    "refusal_note": null,
-    "evidence_ids": [],
+    "status": "UNVERIFIED",
+    "refusal_code": "NO_PRIMARY",
+    "refusal_note": "evidence does not meet any verification rule",
+    "evidence_ids": [
+      "ev_0100",
+      "ev_0101",
+      "ev_0102"
+    ],
     "footnote_id": null,
     "id": "clm_0020",
     "created_at": "2026-09-20T14:01:09.442Z",
-    "updated_at": "2026-09-20T14:01:09.442Z"
+    "updated_at": "2026-09-20T14:57:04.028Z"
   },
   {
     "subject_id": "subj_001",

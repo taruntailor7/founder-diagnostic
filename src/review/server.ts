@@ -64,8 +64,8 @@ blockquote { margin:6px 0; padding:8px 12px; background:var(--bg); border-left:3
              font-style:italic; white-space:pre-wrap }
 .pm span { display:inline-block; margin-right:10px; font-size:11px; font-family:ui-monospace,Menlo,monospace }
 .t { color:var(--ok) } .f { color:var(--no); font-weight:700 } .n { color:var(--muted) }
-form { display:flex; gap:8px; align-items:center; margin-top:14px; flex-wrap:wrap }
-input[type=text] { flex:1; min-width:240px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; font:inherit }
+.claim form { display:flex; gap:8px; align-items:center; margin-top:14px; flex-wrap:wrap }
+.claim input[type=text] { flex:1; min-width:240px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; font:inherit }
 button { padding:8px 16px; border:1px solid var(--line); border-radius:6px; background:#fff;
          font:inherit; font-weight:600; cursor:pointer }
 button.approve { background:var(--ok); color:#fff; border-color:var(--ok) }
@@ -76,12 +76,17 @@ a { color:#1a5fb4 }
 nav { display:flex; gap:18px; margin-top:10px; font-size:13px }
 nav a { color:var(--muted); text-decoration:none; padding-bottom:3px; border-bottom:2px solid transparent }
 nav a.on { color:var(--ink); font-weight:600; border-bottom-color:var(--ink) }
-.card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin-bottom:18px }
-.field { margin-bottom:12px }
-.field label { display:block; font-size:12px; font-weight:600; margin-bottom:4px }
-.field .hint { font-weight:400; color:var(--muted) }
-.field input { width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:6px; font:inherit }
-.row { display:flex; gap:12px } .row > * { flex:1 }
+.card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:22px 24px; margin-bottom:18px }
+form.run { display:block }
+.field { margin-bottom:16px; min-width:0 }
+.field label { display:block; font-size:12px; font-weight:600; margin-bottom:5px; line-height:1.35; min-height:2.7em }
+.field .hint { display:block; font-weight:400; color:var(--muted); font-size:11px; margin-top:1px }
+.field input { display:block; width:100%; padding:10px 12px; border:1px solid var(--line);
+               border-radius:6px; font:inherit; background:#fff }
+.field input:focus { outline:2px solid var(--ink); outline-offset:-1px }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:0 16px }
+.row-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0 16px }
+.actions { margin-top:6px; padding-top:18px; border-top:1px solid var(--line) }
 .primary { background:var(--ink); color:#fff; border-color:var(--ink); padding:10px 22px }
 .errors { background:#fbe3e7; color:var(--no); border-radius:6px; padding:10px 14px; margin-bottom:14px; font-size:13px }
 .errors li { margin-left:16px }
@@ -265,36 +270,54 @@ export async function createServer(): Promise<express.Express> {
           <li>Render the one-page diagnostic.</li>
         </ol>
       </div>
-      <form method="post" action="/run" class="card">
+      <form method="post" action="/run" class="card run">
         <div class="field">
-          <label>LinkedIn profile URL <span class="hint">used only to identify the person; never fetched, because that needs a login</span></label>
+          <label>LinkedIn profile URL
+            <span class="hint">Used only to identify the person. Never fetched, because reading a profile needs a login.</span>
+          </label>
           <input name="linkedin" placeholder="https://www.linkedin.com/in/their-handle" required>
         </div>
+
         <div class="row">
           <div class="field">
-            <label>Full name <span class="hint">required</span></label>
+            <label>Full name
+              <span class="hint">Required. First and last.</span>
+            </label>
             <input name="name" placeholder="First Last" required>
           </div>
           <div class="field">
-            <label>Company</label>
+            <label>Company
+              <span class="hint">Helps the search find the right person.</span>
+            </label>
             <input name="company" placeholder="Their firm">
           </div>
         </div>
-        <div class="row">
+
+        <div class="row-3">
           <div class="field">
-            <label>Role</label>
+            <label>Role
+              <span class="hint">As they describe it.</span>
+            </label>
             <input name="role" placeholder="Founder and CEO">
           </div>
           <div class="field">
-            <label>Their own website <span class="hint">so their words are not counted as independent</span></label>
+            <label>Their own website
+              <span class="hint">So their words are not counted as independent.</span>
+            </label>
             <input name="selfDomain" placeholder="theirfirm.com">
           </div>
+          <div class="field">
+            <label>Location
+              <span class="hint">Optional.</span>
+            </label>
+            <input name="location" placeholder="Dubai, United Arab Emirates">
+          </div>
         </div>
-        <div class="field">
-          <label>Location</label>
-          <input name="location" placeholder="Dubai, United Arab Emirates">
+
+        <div class="actions">
+          <button class="primary">Analyse</button>
+          <span class="meta">&nbsp; Takes a few minutes. You can leave this page open.</span>
         </div>
-        <button class="primary">Analyse</button>
       </form>`;
 
     res.type("html").send(

@@ -5,136 +5,115 @@ of them appears in the diagnostic body. The refusal, not the verification, is
 the point: these are things said in public about this person that could not be
 established from a source worth defending.
 
-## Nuwa Capital Limited is a company established in the DIFC pursuant to the DIFC Companies Law with registration number CL4036.
+## Mr Khaled Talhouni is a Licensed Director of Nuwa Capital Limited
+
+- **Code:** `PREDICATE_DRIFT`
+- **Why:** The figure is real and the cited study exists, but the figure measures something other than what the claim asserts.
+- **Detail:** source src_0002 supports the figure but not its measures
+- **Claim id:** `clm_0001`
+
+## Khaled Talhouni is Managing Partner of Nuwa Capital
 
 - **Code:** `PASSES_DISAGREE`
 - **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
 - **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
-- **Claim id:** `clm_0014`
+- **Claim id:** `clm_0007`
 
-## Khaled Talhouni is the managing partner at Wamda Capital.
+## Khaled Talhouni is a Managing Partner at Nuwa Capital Ltd.
+
+- **Code:** `CONFLICTING_VALUES`
+- **Why:** Credible sources disagree on the value or date, and nothing authoritative settles it.
+- **Detail:** 1 source(s) contradict this claim
+- **Claim id:** `clm_0019`
+
+## Khaled Talhouni is the Managing Partner of Nuwa Capital
 
 - **Code:** `PASSES_DISAGREE`
 - **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
 - **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
 - **Claim id:** `clm_0021`
 
-## Talhouni cofounded Nuwa Capital in 2020.
+## Nuwa Capital announced the first close of its $100 million NVFI fund in February 2021
+
+- **Code:** `NO_PRIMARY`
+- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
+- **Detail:** no supporting source found
+- **Claim id:** `clm_0026`
+
+## Nuwa Capital closed a $100m debut fund
 
 - **Code:** `NO_PRIMARY`
 - **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
 - **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0025`
+- **Claim id:** `clm_0030`
 
-## Khaled Talhouni authored the article "Sharing our way out of malaise: MENA and the sharing economy".
+## Khaled Talhouni has over a decade of experience as one of MENA's earliest tech VCs
 
 - **Code:** `NO_PRIMARY`
 - **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
+- **Detail:** every supporting source is an aggregator
 - **Claim id:** `clm_0031`
 
-## Khaled Talhouni co‑founded Nuwa Capital.
+## Khaled Talhouni was Managing Partner at Wamda Capital
 
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0032`
+- **Code:** `CONFLICTING_VALUES`
+- **Why:** Credible sources disagree on the value or date, and nothing authoritative settles it.
+- **Detail:** 2 source(s) contradict this claim
+- **Claim id:** `clm_0035`
 
-## Nuwa Capital announced the first close of its $100 million NVFI fund in February.
+## Khaled Talhouni is Founder & Managing Partner at Nuwa Capital
 
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0036`
+- **Code:** `PASSES_DISAGREE`
+- **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
+- **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
+- **Claim id:** `clm_0038`
 
-## Nuwa Capital closed its debut fund.
+## Khaled Talhouni is a Board of Director at Nuwa Capital Ltd.
 
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0041`
+- **Code:** `PASSES_DISAGREE`
+- **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
+- **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
+- **Claim id:** `clm_0040`
 
-## Episode 5 of The Moghamra Podcast was released on 5 Aug 2023.
+## Khaled Talhouni is the co-founder of Nuwa Capital
 
 - **Code:** `NO_PRIMARY`
 - **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
 - **Detail:** every supporting source is an aggregator
 - **Claim id:** `clm_0044`
 
-## Khaled Talhouni is Founder & Managing Partner at Nuwa Capital.
+## Khaled Talhouni is the Founder and Managing Partner of Nuwa Capital
+
+- **Code:** `PASSES_DISAGREE`
+- **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
+- **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
+- **Claim id:** `clm_0047`
+
+## Nuwa Capital has backed Eyewa
 
 - **Code:** `NO_PRIMARY`
 - **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
 - **Detail:** every supporting source is an aggregator
-- **Claim id:** `clm_0048`
+- **Claim id:** `clm_0052`
 
-## Khaled Talhouni is a Managing Partner & Board of Director at Nuwa Capital Ltd.
+## Mr Khaled Talhouni is a Senior Executive Officer of Nuwa Capital Limited
 
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** no supporting source found
-- **Claim id:** `clm_0051`
+- **Code:** `PASSES_DISAGREE`
+- **Why:** The confirming pass and the disconfirming pass reached opposite conclusions. Escalated rather than resolved automatically.
+- **Detail:** confirming pass returned supports, disconfirming pass returned contradicts
+- **Claim id:** `clm_0002`
 
-## Khaled Talhouni holds the role of Managing Partner and co‑founder at Nuwa Capital.
+## Nuwa Capital Limited is regulated by the DFSA for the provision of managing a collective investment fund and advising on financial products
 
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** every supporting source is an aggregator
-- **Claim id:** `clm_0055`
+- **Code:** `PREDICATE_DRIFT`
+- **Why:** The figure is real and the cited study exists, but the figure measures something other than what the claim asserts.
+- **Detail:** source src_0001 supports the figure but not its measures
+- **Claim id:** `clm_0008`
 
-## Nuwa Capital has backed Eyewa.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** every supporting source is an aggregator
-- **Claim id:** `clm_0060`
-
-## He has led or participated in over 60 venture capital transactions.
+## Khaled Talhouni has led or participated in over 60 venture capital transactions
 
 - **Code:** `NO_PRIMARY`
 - **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
 - **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0022`
-
-## Nuwa Capital's fund portfolio comprises 35 companies.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0026`
-
-## Khaled Talhouni is a managing partner of Nuwa Capital.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0033`
-
-## Nuwa Capital's NVFI fund size is $100 million.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** evidence does not meet any verification rule
-- **Claim id:** `clm_0037`
-
-## Nuwa Capital's debut fund size was $100m.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** no supporting source found
-- **Claim id:** `clm_0042`
-
-## Khaled Talhouni is Managing Partner at Nuwa Capital.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** every supporting source is an aggregator
-- **Claim id:** `clm_0045`
-
-## Nuwa Capital is active.
-
-- **Code:** `NO_PRIMARY`
-- **Why:** Every supporting source is secondary or an aggregator. No filing, register entry or first-hand record establishes this.
-- **Detail:** every supporting source is an aggregator
-- **Claim id:** `clm_0050`
+- **Claim id:** `clm_0020`
 
