@@ -359,3 +359,52 @@ A rule can only be as good as the evidence reaching it, and unit tests that cons
 their own evidence cannot tell you whether the real pipeline produces it. Only the
 end-to-end run on the real claim surfaced this, and I nearly shipped without doing it,
 since by then everything was green.
+
+---
+
+## 8. The machine leaked into the artifact
+
+**Date:** 2026-09-20
+**Stage:** deployment
+**Class:** environment captured as configuration, breaking the headline promise
+
+The README leads with the claim that matters most to a reviewer:
+
+> `npm install && npm run demo` works on a clean clone with no API key.
+
+It did not. Deploying surfaced it:
+
+```
+==> Running build command 'npm ci --omit=dev'...
+npm error code E401
+npm error Incorrect or missing password.
+```
+
+All 105 entries in the committed `package-lock.json` resolved to
+`gdartifactory1.jfrog.io`, an internal corporate npm mirror, because that is what
+this machine's npm is configured for. `npm install` wrote those hostnames into the
+lockfile and the lockfile was committed.
+
+Three consequences, in increasing order of seriousness. The deploy could not
+authenticate. Anyone cloning the repository would have hit the identical error, so
+the one instruction the README puts at the top was broken for every reader outside
+one private network. And a public repository attached to a job application published
+an employer's internal infrastructure hostname.
+
+**Caught by:** deploying. Nothing local could have found it. Every check I ran used
+the same machine with the same npm configuration, so `npm install` worked perfectly
+every time, including on what I thought was a clean-clone test. The clone was clean;
+the environment was not.
+
+**Fixed by** an `.npmrc` pinning `registry.npmjs.org` and regenerating the lockfile.
+A clean clone now installs from the public registry and reproduces the diagnostic
+exactly.
+
+**Note:** earlier commits still contain the old lockfile, so the hostname remains in
+git history. It is an internal hostname rather than a credential, and JFrog is not a
+secret, but it is there and removing it would need a history rewrite.
+
+**What I would take from this.** I verified reproducibility eight times and every
+check passed, because every check inherited the assumption I was trying to test.
+"Works on a clean clone" cannot be established from the machine that built it. The
+same mistake shape as entry 1: a true observation, generalised past what it supports.
