@@ -148,14 +148,37 @@ const FREE_TIER_NOTICE = `
  * opens, rather than three empty tabs and a forty minute wait. Unlabelled, that
  * reads as the tool being hardcoded to one person.
  */
-const SAMPLE_NOTICE = (name: string): string => `
-<div class="notice" style="border-left-color:#0b4f6c">
-  <h3 style="color:#0b4f6c">You are looking at a worked example</h3>
-  <p style="margin:0">
-    This is a completed assessment of <strong>${esc(name)}</strong>, committed to
-    the repository so there is something real to read without running anything.
-    Analysing someone else archives it under <code>ledger/archive/</code> and
-    starts clean; it is a sample, not a fixture this tool is tied to.
+/**
+ * A previous assessment is offered, not presented.
+ *
+ * Opening straight into somebody else's claims reads as though the tool is tied
+ * to that person. It is a worked example, committed so there is something real
+ * to read without running anything, and it should be something you choose to
+ * look at.
+ */
+const PRIOR_ASSESSMENT = (
+  name: string,
+  where: "review" | "doc",
+  counts: { verified: number; partial: number; refused: number; total: number },
+): string => `
+<div class="card">
+  <div class="meta" style="margin-bottom:6px">Previous assessment</div>
+  <p class="text" style="margin-bottom:10px">${esc(name)}</p>
+  <div class="counts" style="margin-bottom:14px">
+    <span>claims <b>${counts.total}</b></span>
+    <span class="v">verified <b>${counts.verified}</b></span>
+    <span class="p">partially verified <b>${counts.partial}</b></span>
+    <span class="r">refused <b>${counts.refused}</b></span>
+  </div>
+  <a href="${where === "review" ? "/?open=1" : "/diagnostic?open=1"}">
+    <button type="button" class="primary">
+      ${where === "review" ? "Open the claims and evidence" : "Open the diagnostic"}
+    </button>
+  </a>
+  <a href="/run"><button type="button">Analyse someone else</button></a>
+  <p class="meta" style="margin:12px 0 0">
+    A worked example committed to the repository. Analysing someone else archives
+    it and starts clean.
   </p>
 </div>`;
 
@@ -461,10 +484,11 @@ export async function createServer(
     );
   });
 
-  app.get("/diagnostic", async (_req: Request, res: Response) => {
+  app.get("/diagnostic", async (req: Request, res: Response) => {
     const file = path.join(paths.out, "diagnostic.html");
     const counts = { queue: await queueSize() };
     const subject = await readJson<Subject | null>("subject.json", null);
+    const opened = req.query["open"] === "1";
 
     /**
      * A rendered document on disk is not necessarily this subject's document.
@@ -507,6 +531,24 @@ export async function createServer(
       return;
     }
 
+    if (!opened && subject) {
+      const claims = await readJson<Claim[]>("claims.json", []);
+      res.type("html").send(
+        page(
+          "Diagnostic",
+          "A rendered assessment is available.",
+          nav("doc", counts),
+          PRIOR_ASSESSMENT(subject.name, "doc", {
+            total: claims.length,
+            verified: claims.filter((c) => c.status === "VERIFIED").length,
+            partial: claims.filter((c) => c.status === "PARTIALLY_VERIFIED").length,
+            refused: claims.filter((c) => c.status === "UNVERIFIED").length,
+          }),
+        ),
+      );
+      return;
+    }
+
     res.type("html").send(
       page(
         "Diagnostic",
@@ -532,7 +574,7 @@ export async function createServer(
     res.type("html").send(await fs.readFile(file, "utf8"));
   });
 
-  app.get("/", async (_req: Request, res: Response) => {
+  app.get("/", async (req: Request, res: Response) => {
     const [subject, claims, evidence, sources, approvals] = await Promise.all([
       readJson<Subject | null>("subject.json", null),
       readJson<Claim[]>("claims.json", []),
@@ -548,6 +590,24 @@ export async function createServer(
     const approvedCount = claims.filter(
       (c) => decisions.get(c.id)?.decision === "approve",
     ).length;
+
+    const opened = req.query["open"] === "1";
+    if (!opened && subject && claims.length > 0) {
+      res.type("html").send(
+        page(
+          "Review",
+          "Nothing renders without a decision recorded here.",
+          nav("review", { queue: queue.filter((c) => c.status === "VERIFIED" || c.status === "PARTIALLY_VERIFIED").length }),
+          PRIOR_ASSESSMENT(subject.name, "review", {
+            total: claims.length,
+            verified: claims.filter((c) => c.status === "VERIFIED").length,
+            partial: claims.filter((c) => c.status === "PARTIALLY_VERIFIED").length,
+            refused: claims.filter((c) => c.status === "UNVERIFIED").length,
+          }),
+        ),
+      );
+      return;
+    }
 
     const body = `
 ${
@@ -569,7 +629,7 @@ ${
           `${approvedCount} approved &middot; ${claims.length} claims. ` +
           `Refusals are listed first so they get read. Nothing renders without an approval recorded here.`,
         nav("review", { queue: queue.filter((c) => c.status === "VERIFIED" || c.status === "PARTIALLY_VERIFIED").length }),
-        (subject ? SAMPLE_NOTICE(subject.name) : "") + body,
+        body,
       ),
     );
   });
