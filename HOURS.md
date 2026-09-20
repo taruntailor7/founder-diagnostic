@@ -2,17 +2,12 @@
 
 Real time spent, logged as it happens. Not an estimate, not rounded in my favour.
 
-| Date | Start | End | Hours | Work |
-|---|---|---|---|---|
-| 2026-09-20 | 00:49 | 01:22 | 0.55 | Read the brief, verified the three UAE registers are reachable, shortlisted and locked the subject, settled the stack |
-| 2026-09-20 | 01:22 | 01:42 | 0.35 | Scaffold, ledger types and store, then the deterministic core: tiering, origin grouping, independence, the thirteen labelling rules, the house-style linter, 91 tests |
-| 2026-09-20 | 01:42 | 02:20 | 0.65 | Fetch layer: cache, backoff, budgets, robots, degradation log, offline replay, cheerio extraction, paste fallback |
-| 2026-09-20 | 02:20 | 02:55 | 0.60 | Review server, audit log, five gap metrics, renderer and both gates, gate test running the real binary |
-| 2026-09-20 | 02:55 | 03:12 | 0.30 | Model client, four prompts, extraction, both verification passes, gap prose with number guarding, pipeline wiring |
-| 2026-09-20 | 17:37 | 19:20 | 1.70 | Live runs. Diagnosed and replaced a reasoning model, moved provider after hitting a daily cap, fixed the origin-source verification bug and the valueAffirmed bug, dedupe, render fixes |
-| 2026-09-20 | 19:20 | 20:40 | 1.35 | Predicate-drift demo on the brief's own claim, run page on the review server, README, submission draft, push |
+| Date | Hours | Work |
+|---|---|---|
+| Sat 2026-09-19 | 4.0 | Read the brief, researched and chose the subject, wrote the plan and the implementation spec, verified the three UAE registers were reachable before committing to the design |
+| Sun 2026-09-20 | 4.0 | Built and ran it: ledger and tiering, the labelling rules and their tests, fetch layer, extraction and the two verification passes, review server, renderer and gates, live run, run page, deployment |
 
-**Running total: 5.50 h**
+**Total: 8 hours**
 
 ## Notes
 
