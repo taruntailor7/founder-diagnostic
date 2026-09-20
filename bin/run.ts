@@ -308,7 +308,7 @@ async function main(): Promise<void> {
    * which reads as a finding and is not one, or printing a refusal ledger
    * nobody can read. Everything extracted stays in claims.json either way.
    */
-  const MAX_VERIFIED_CLAIMS = 28;
+  const MAX_VERIFIED_CLAIMS = 60;
   const tierOf = (c: Claim) => sourcesById.get(c.derived_from_source_id)?.tier ?? 0;
 
   /**

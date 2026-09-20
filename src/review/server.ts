@@ -103,7 +103,42 @@ pre.logs { background:#13161a; color:#d7dde4; border-radius:8px; padding:14px 16
                     background:var(--line); color:var(--ink); font-size:11px; font-weight:700; display:grid; place-items:center }
 .steps li.done { color:var(--ink) }
 .steps li.done::before { background:var(--ok); color:#fff }
+.notice { background:#fffaf0; border:1px solid #f0e0c0; border-left:3px solid var(--part);
+          border-radius:6px; padding:14px 16px; margin-bottom:18px; font-size:13px; line-height:1.55 }
+.notice h3 { margin:0 0 6px; font-size:13px; color:var(--part) }
+.notice table { border-collapse:collapse; margin:8px 0 6px; font-size:12px }
+.notice td { padding:2px 16px 2px 0; vertical-align:top }
+.notice td:first-child { color:var(--muted) }
+.notice code { background:#f3ede0; padding:1px 5px; border-radius:3px;
+               font:11px ui-monospace,Menlo,monospace }
 `;
+
+/**
+ * Shown wherever someone might start a run or wait on one.
+ *
+ * The free tier is slow for a reason that has nothing to do with how the
+ * pipeline is written, and a reader who does not know that will conclude the
+ * tool is slow. Naming the limit, the arithmetic and the fix is cheaper than
+ * letting them guess.
+ */
+const FREE_TIER_NOTICE = `
+<div class="notice">
+  <h3>Running on free models, which is why this takes minutes rather than seconds</h3>
+  <p style="margin:0 0 4px">
+    The models are Groq's free tier. The constraint is tokens per minute, not
+    compute: each verification call is roughly 2,000 tokens against an 8,000
+    token minute, so four calls a minute is the ceiling. One profile needs about
+    160 calls.
+  </p>
+  <table>
+    <tr><td>Free tier</td><td><strong>about 40 minutes</strong> per profile, and the 200,000 token daily cap is not enough to finish one</td></tr>
+    <tr><td>Paid tier</td><td><strong>3 to 5 minutes</strong>, at roughly 5 to 10 cents per profile</td></tr>
+  </table>
+  <p style="margin:4px 0 0">
+    Switching is one line in <code>.env</code>: the provider and the three model
+    names are configuration, not code. Nothing else changes.
+  </p>
+</div>`;
 
 function nav(active: "run" | "review" | "doc", counts: { queue: number }): string {
   const item = (href: string, key: string, label: string) =>
@@ -234,6 +269,7 @@ export async function createServer(): Promise<express.Express> {
     if (job) {
       const done = job.state !== "running";
       const body = `
+        ${job.state === "running" ? FREE_TIER_NOTICE : ""}
         <div class="card">
           <span class="state ${esc(job.state)}">${esc(job.state)}</span>
           <span class="meta">&nbsp; ${esc(job.request.name)} &middot; ${esc(job.request.linkedin)}</span>
@@ -263,6 +299,7 @@ export async function createServer(): Promise<express.Express> {
     }
 
     const body = `
+      ${FREE_TIER_NOTICE}
       <div class="card">
         <ol class="steps">
           <li>Paste a public LinkedIn profile URL and confirm who the person is.</li>
