@@ -82,6 +82,8 @@ form.run { display:block }
 .field { margin-bottom:16px; min-width:0 }
 .field label { display:block; font-size:12px; font-weight:600; margin-bottom:5px; line-height:1.35; min-height:2.7em }
 .field .hint { display:block; font-weight:400; color:var(--muted); font-size:11px; margin-top:1px }
+.field textarea { width:100%; padding:9px 11px; border:1px solid var(--line);
+                  border-radius:6px; font:12px/1.5 ui-monospace,Menlo,monospace; resize:vertical }
 .field input { display:block; width:100%; padding:10px 12px; border:1px solid var(--line);
                border-radius:6px; font:inherit; background:#fff }
 .field input:focus { outline:2px solid var(--ink); outline-offset:-1px }
@@ -398,6 +400,20 @@ export async function createServer(
             <input name="location" placeholder="Dubai, United Arab Emirates">
           </div>
         </div>
+
+        <div class="field">
+          <label>Starting URLs, one per line
+            <span class="hint">Needed on this instance. Search engines refuse requests from hosted servers, so it cannot find pages on its own.</span>
+          </label>
+          <textarea name="seeds" rows="5" placeholder="https://www.dfsa.ae/public-register/individuals/mr-someone
+https://www.theirfirm.com/
+https://www.thenationalnews.com/business/an-article-about-them/"></textarea>
+        </div>
+        <p class="meta" style="margin:-4px 0 14px">
+          A register entry, their own site, and two or three news articles is
+          usually enough. Each one is fetched, tiered and verified exactly as a
+          search result would be. Seeding a page does not privilege it.
+        </p>
 
         <div class="actions">
           <button class="primary">Analyse</button>
