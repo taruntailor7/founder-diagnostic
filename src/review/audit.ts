@@ -84,7 +84,10 @@ export function pendingReview(
   };
 
   return claims
-    .filter((c) => decisions.get(c.id)?.decision !== "approve")
+    .filter((c) => {
+      const d = decisions.get(c.id)?.decision;
+      return d !== "approve" && d !== "reject";
+    })
     .sort(
       (a, b) =>
         (order[a.status] ?? 9) - (order[b.status] ?? 9) ||

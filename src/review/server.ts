@@ -258,8 +258,9 @@ function claimHtml(
       <form method="post" action="/decide">
         <input type="hidden" name="claim_id" value="${esc(claim.id)}">
         <input type="text" name="note" placeholder="Note, for example: checked the DFSA entry myself">
+        ${current === "hold" ? `<span class="badge pending">On hold</span>` : ""}
         <button class="approve" name="decision" value="approve">Approve</button>
-        <button name="decision" value="hold">Hold</button>
+        <button name="decision" value="hold" ${current === "hold" ? "disabled" : ""}>Hold</button>
         <button class="reject" name="decision" value="reject">Reject</button>
       </form>
     </div>
@@ -668,7 +669,7 @@ ${
       decision,
       reviewer: entry.reviewer,
     });
-    res.redirect("/");
+    res.redirect("/?open=1");
   });
 
   // No PUT, PATCH or DELETE anywhere. The log is append only.

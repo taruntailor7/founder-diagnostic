@@ -209,6 +209,14 @@ reviewed deliberately rather than scrolled past. Each row shows the claim, its
 refusal code in plain English, and every evidence row with its quote, source, tier,
 pass number and which model produced it.
 
+Each claim gets one of three decisions:
+
+| Decision | Leaves queue | In diagnostic |
+|---|---|---|
+| Approve | Yes | Yes |
+| Reject | Yes | No |
+| Hold | No, stays | No (blocks render) |
+
 - Bound to `127.0.0.1` only, never `0.0.0.0`
 - Refuses to start without `REVIEWER` set, so the log cannot record an anonymous approval
 - Append only. No update route, no delete route. A reversed decision is a new line,
