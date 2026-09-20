@@ -450,3 +450,36 @@ inventing anything.
 behind it, which is the exact pattern the labeller refuses. I grepped for others
 afterwards and there were none, but I would not have found this one by reading; the
 compiler was satisfied and the tests passed. A second subject found it in seconds.
+
+---
+
+## 10. The document outlived the evidence
+
+**Date:** 2026-09-20
+**Stage:** running a second subject on the deployed instance
+**Class:** two stores of truth, only one of them reset
+
+Analysing a second person archived the previous ledger correctly. Review reported
+"Nothing analysed yet", which was true. The Diagnostic tab showed a complete,
+footnoted, one-page assessment of Khaled Talhouni.
+
+The ledger had moved. `out/diagnostic.html` had not. So the tab served a finished
+document about one person while the evidence behind it belonged to another, under
+the new subject's name.
+
+Nothing warned. The document was internally consistent, every footnote resolved,
+every claim it cited was approved. It was simply about somebody else.
+
+This is the failure the whole project is aimed at, committed by the project. A
+rendered artifact is a claim about the ledger, and it needs the same treatment as
+any other claim: check it, do not assume it.
+
+**Fixed twice over, deliberately.** The rendered document is archived alongside the
+ledger when the subject changes. And the page independently verifies that the
+document on disk names the current subject before serving it, so a stale file
+cannot appear under the wrong name whatever else goes wrong.
+
+**Caught by** a person clicking through the tabs in order, which no test did. The
+render gate has its own tests and they pass; they check that an unapproved claim
+cannot be published. None of them asks whether the document is about the right
+person, because it never occurred to me that it might not be.

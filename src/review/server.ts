@@ -446,6 +446,32 @@ export async function createServer(
   app.get("/diagnostic", async (_req: Request, res: Response) => {
     const file = path.join(paths.out, "diagnostic.html");
     const counts = { queue: await queueSize() };
+    const subject = await readJson<Subject | null>("subject.json", null);
+
+    /**
+     * A rendered document on disk is not necessarily this subject's document.
+     * Checked against the ledger rather than assumed, so a stale file cannot be
+     * served under a new subject's name.
+     */
+    if (existsSync(file) && subject) {
+      const html = await fs.readFile(file, "utf8");
+      if (!html.includes(subject.name)) {
+        res.type("html").send(
+          page(
+            "Diagnostic",
+            "The document on disk is for a different subject.",
+            nav("doc", counts),
+            `<div class="card">
+               <p>A rendered diagnostic exists, but it does not name
+                  <strong>${esc(subject.name)}</strong>. It belongs to an earlier
+                  assessment and will not be shown here.</p>
+               <form method="post" action="/render"><button class="primary">Render for ${esc(subject.name)}</button></form>
+             </div>`,
+          ),
+        );
+        return;
+      }
+    }
 
     if (!existsSync(file)) {
       res.type("html").send(

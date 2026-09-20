@@ -208,7 +208,17 @@ async function main(): Promise<void> {
         .catch(() => {});
     }
 
-    log.warn("new subject, previous ledger archived", {
+    // The rendered document goes with it. Leaving out/ in place served a
+    // finished diagnostic about the previous person under the new subject's
+    // tab, which is precisely the mismatch between artifact and evidence that
+    // this tool exists to prevent.
+    for (const file of ["diagnostic.html", "diagnostic.md", "refusals.md"]) {
+      await fs
+        .rename(path.join(paths.out, file), path.join(archive, file))
+        .catch(() => {});
+    }
+
+    log.warn("new subject, previous ledger and document archived", {
       was: existingSubject.name,
       now: arg("name") ?? "(unnamed)",
       archive: path.basename(archive),
