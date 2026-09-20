@@ -159,20 +159,61 @@ async function main(): Promise<void> {
 
   log.stage("identity");
 
-  const plan = planResolution(linkedin ?? (existingSubject as Subject).linkedin_url, {
-    name: arg("name") ?? existingSubject?.name,
-    company: arg("company") ?? existingSubject?.company,
+  const subject_url = linkedin ?? (existingSubject as Subject).linkedin_url;
+
+  // Only carry details forward when this is the same person. Inheriting the
+  // previous subject's company would send their firm into this person's search
+  // queries and into what counts as self-reported.
+  const sameSubject = existingSubject?.linkedin_url === subject_url;
+  const carried = sameSubject ? existingSubject : undefined;
+
+  const plan = planResolution(subject_url, {
+    name: arg("name") ?? carried?.name,
+    company: arg("company") ?? carried?.company,
   });
 
-  const company = arg("company") ?? existingSubject?.company ?? "";
-  const role = arg("role") ?? existingSubject?.role ?? "";
+  const company = arg("company") ?? carried?.company ?? "";
+  const role = arg("role") ?? carried?.role ?? "";
   const selfDomains = [
-    ...(existingSubject?.self_domains ?? []),
+    ...(carried?.self_domains ?? []),
     ...argAll("self-domain"),
   ];
 
   // --- Harvest ---------------------------------------------------------------
   log.stage("harvest");
+
+  /**
+   * A different subject gets a different ledger.
+   *
+   * Without this, analysing a second person inherits the first person's
+   * sources, claims and evidence, and the pipeline quietly evaluates one
+   * person's facts against another's documents. The identity gate catches the
+   * consequence, refusing everything as IDENTITY_AMBIGUOUS, but arriving at a
+   * correct refusal through a corrupted ledger is not the same as being right.
+   *
+   * The previous ledger is moved aside rather than deleted. It is the record of
+   * an assessment somebody may have approved claims in.
+   */
+  if (existingSubject && existingSubject.linkedin_url !== subject_url) {
+    const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const archive = path.join(paths.ledger, `archive-${stamp}`);
+    await fs.mkdir(archive, { recursive: true });
+
+    for (const file of [
+      "subject.json", "sources.json", "claims.json",
+      "evidence.json", "gaps.json", "gap-prose.json", "approvals.jsonl",
+    ]) {
+      await fs
+        .rename(path.join(paths.ledger, file), path.join(archive, file))
+        .catch(() => {});
+    }
+
+    log.warn("new subject, previous ledger archived", {
+      was: existingSubject.name,
+      now: arg("name") ?? "(unnamed)",
+      archive: path.basename(archive),
+    });
+  }
 
   let sources = await readJson<Source[]>("sources.json", []);
   const seeds = [...argAll("seed"), ...(await seedsFromFile(arg("seeds-file")))];
@@ -204,12 +245,12 @@ async function main(): Promise<void> {
   const subject: Subject = {
     id: "subj_001",
     name: plan.name,
-    linkedin_url: linkedin ?? (existingSubject as Subject).linkedin_url,
+    linkedin_url: subject_url,
     role,
     company,
     company_domain: selfDomains[0] ?? null,
     self_domains: selfDomains,
-    location: arg("location") ?? existingSubject?.location ?? null,
+    location: arg("location") ?? carried?.location ?? null,
     identity_corroborations: corroborations,
     assessed_at: new Date().toISOString(),
     pipeline_version: PIPELINE_VERSION,

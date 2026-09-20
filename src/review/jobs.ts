@@ -60,6 +60,16 @@ export function validate(req: Partial<JobRequest>): string[] {
     problems.push("Full name is required, first and last");
   }
 
+  // The company name goes into search queries verbatim. A pasted LinkedIn
+  // headline such as "Working as a SDE 2 at GoDaddy" matches nothing and the
+  // harvest silently returns no results.
+  const company = (req.company ?? "").trim();
+  if (company.split(/\s+/).length > 5 || /\b(working|at|senior|engineer|manager)\b/i.test(company)) {
+    problems.push(
+      `Company should be the organisation name on its own, for example "GoDaddy" rather than a job title or headline`,
+    );
+  }
+
   return problems;
 }
 
