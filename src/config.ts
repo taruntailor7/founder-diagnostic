@@ -80,6 +80,14 @@ export const llm = {
   temperature: 0,
 } as const;
 
+/**
+ * Discovery. Keyless search works from a laptop and not from a server, so a
+ * hosted instance needs an API key. Free tiers are sufficient.
+ */
+export const search = {
+  tavilyKey: str("TAVILY_API_KEY", ""),
+} as const;
+
 /** Exceeding a budget stops that stage cleanly and leaves the ledger resumable. */
 export const budgets = {
   maxFetches: int("MAX_FETCHES", 150),

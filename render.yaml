@@ -43,6 +43,11 @@ services:
       - key: APP_PASSWORD
         sync: false
 
+      # Required for the deployed Analyse button to discover sources on its
+      # own. Without it, starting URLs must be supplied by hand.
+      - key: TAVILY_API_KEY
+        sync: false
+
       # Optional. Without it the deployed instance still serves the committed
       # assessment; only starting a new run needs a key.
       - key: LLM_API_KEY
